@@ -2,7 +2,7 @@ import { createClient } from '@supabase/supabase-js'
 
 export const pruebas = {
     template: `<h1>Esto es la prueba de Supabase</h1>`,
-    script: ()=>{
+    script: async ()=>{
         console.log('Esta es la vista para hacer pruebas del supabase');
         
         //Conexion con la base de datos
@@ -13,5 +13,26 @@ export const pruebas = {
 
         console.log(supabase);
 
+        //motores
+        const leerTodosLosMotores = async()=>{
+            
+            let { data: motor, error } = await supabase
+            .from('motor')
+            .select('*')
+            return motor
+        }
+        let motores = await leerTodosLosMotores()
+        console.log(motores);
+
+        //funcion para añadir usuarios
+        const agregarUsuario = async ()=>{
+
+            let { data, error } = await supabase.auth.signUp({
+                email: 'redondobarrosoruben@fpllefia.com',
+                password: 'ruben892003'
+              })
+        }
+
+        //await agregarUsuario()
     }
 }
