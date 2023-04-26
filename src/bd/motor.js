@@ -25,7 +25,7 @@ export class Motor {
         }
         //devuelvo los valores de la tabla motor
         return motor.map(({id, created_at, fabricante, potencia, par, cilindrada, consumo, velocidadMax, aceleracion, numCilindros}) => {
-            return new Motor(id, created_at, created_at, fabricante, potencia, par, cilindrada, consumo, velocidadMax, aceleracion, numCilindros)
+            return new Motor(id, created_at, fabricante, potencia, par, cilindrada, consumo, velocidadMax, aceleracion, numCilindros)
         })
     }
 
@@ -39,8 +39,35 @@ export class Motor {
         if(error) {
             throw new Error(error.message)
         }
-
-
+        //devuelvo los valores de la tabla motor con el id que le paso
+            return new Motor(motor.id, motor.created_at, motor.fabricante, motor.potencia, motor.par, motor.cilindrada, motor.consumo, motor.velocidadMax, motor.aceleracion, motor.numCilindros)
     }
+
+    //funcion para crear un motor
+    static async crear(motorobjeto){
+        const { data, error } = await supabase
+            .from('motor')
+            .insert(motorobjeto)
+            .select()
+
+        if(error){
+            throw new Error(error.message)
+        }
+        return true
+    }
+
+    static async borrar(id){
+        const { error } = await supabase
+        .from('motor')
+        .delete()
+        .eq('id', id)
+  
+      if (error) {
+        throw new Error(error.message)
+      }
+      return true
+    }
+
+    
 
 }
