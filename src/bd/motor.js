@@ -18,7 +18,7 @@ export class Motor {
     static async getAll(){
         let { data: motor, error } = await supabase
         .from('motor')
-        .select('*')
+        .select('*')    
         .order('created_at', { ascending: false })
         if(error){
             throw new Error(error.message)
@@ -31,9 +31,15 @@ export class Motor {
 
     static async getById(id) {
        
-let { data: motor, error } = await supabase
-.from('motor')
-.select('*')
+        let { data: motor, error } = await supabase
+            .from('motor')
+            .select('*')
+            .eq('id', id)
+            .single()
+        if(error) {
+            throw new Error(error.message)
+        }
+
 
     }
 
