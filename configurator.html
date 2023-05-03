@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurator</title>
+     <!-- Font Awesome -->
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+     <!-- Google Fonts Roboto -->
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+     <!-- MDB -->
+     <link rel="stylesheet" href="css/mdb.min.css" />
+     <!-- Custom styles -->
+     <link rel="stylesheet" href="css/style.css" />
+     <!--Bootstrap-->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+     <!--Style-->
+     <link rel="stylesheet" href="src/estilo.css">
+</head>
+<body class="bodyC">
+      <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark p-3" id="navbarMenu">
+      <div class="container-fluid">
+        <a href="index.html"><img src="/img/logo2.png" alt="" id="logoEncabezado" class="m-2 logo2"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto ">
+            <li class="nav-item">
+              <a class="nav-link mx-2" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2 active" href="/configurator.html">Configurator</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="#">Roadmap</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Company
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="https://www.ensalza.com/blog/sobre-nosotros-pagina/">Blog</a></li>
+                <li><a class="dropdown-item" href="https://www.ensalza.com/blog/sobre-nosotros-pagina/">About Us</a></li>
+                <li><a class="dropdown-item" href="https://www.ensalza.com/blog/sobre-nosotros-pagina/">Contact us</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </nav>
+      <!-- Navbar -->
+    </header>
+    <main>
+    <!--Main Navigation-->
+<header>
+  <!-- Heading -->
+  <div class="encabezadoConfigurador mb-4">
+    <div class="container py-4">
+      <h2 class="text-white mt-2">CONFIGURATOR</h2>
+    </div>
+  </div>
+  <!-- Heading -->
+</header>
+
+<!-- sidebar + content -->
+<section class="">
+  <div class="container">
+    <div class="row">
+      <!-- sidebar -->
+      <div class="col-lg-3">
+        <!-- Toggle button -->
+        <button
+                class="btn btn-outline-secondary mb-3 w-100 d-lg-none"
+                type="button"
+                data-mdb-toggle="collapse"
+                data-mdb-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                >
+          <span>Show filter</span>
+        </button>
+        <!-- Collapsible wrapper -->
+        <div class="collapse card d-lg-block mb-5 cardOption shadows" id="navbarSupportedContent ">
+          <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+              
+              </h2>
+            
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">  </h2>
+              <p id="optionsToModify" class="mt-3">OPTIONS TO MODIFY:</p>
+              <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo">
+                <div class="accordion-body">
+                  <div>
+                    <!-- Checked checkbox -->
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked1" checked />
+                      <label class="form-check-label" for="flexCheckChecked1">Mercedes</label>
+                      <span class="badge badge-secondary float-end">120</span>
+                    </div>
+                    <!-- Checked checkbox -->
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked2" checked />
+                      <label class="form-check-label" for="flexCheckChecked2">Toyota</label>
+                      <span class="badge badge-secondary float-end">15</span>
+                    </div>
+                    <!-- Checked checkbox -->
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked3" checked />
+                      <label class="form-check-label" for="flexCheckChecked3">Mitsubishi</label>
+                      <span class="badge badge-secondary float-end">35</span>
+                    </div>
+                    <!-- Checked checkbox -->
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked4" checked />
+                      <label class="form-check-label" for="flexCheckChecked4">Nissan</label>
+                      <span class="badge badge-secondary float-end">89</span>
+                    </div>
+                    <!-- Default checkbox -->
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                      <label class="form-check-label" for="flexCheckDefault">Honda</label>
+                      <span class="badge badge-secondary float-end">30</span>
+                    </div>
+                    <!-- Default checkbox -->
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                      <label class="form-check-label" for="flexCheckDefault">Suzuki</label>
+                      <span class="badge badge-secondary float-end">30</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-9">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-6 d-flex">
+            <div class="card w-100 my-2 shadow-2-strong">
+              <img src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/10.webp" class="card-img-top" />
+              <div class="card-body d-flex flex-column">
+                <div class="d-flex flex-row">
+                  <h5 class="mb-1 me-1">$34,50</h5>
+                  <span class="text-danger"><s>$49.99</s></span>
+                </div>
+                <p class="card-text">T-shirts with multiple colors, for men and lady</p>
+                <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                  <a href="#!" class="btn btn-primary shadow-0 me-1 btnCard">Select</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 d-flex">
+            <div class="card w-100 my-2 shadow-2-strong">
+              <img src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/11.webp" class="card-img-top" />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">$120.00</h5>
+                <p class="card-text">Winter Jacket for Men and Women, All sizes</p>
+                <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                  <a href="#!" class="btn btn-primary shadow-0 me-1 btnCard">Select</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 d-flex">
+            <div class="card w-100 my-2 shadow-2-strong">
+              <img src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/12.webp" class="card-img-top" />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">$120.00</h5>
+                <p class="card-text">T-shirts with multiple colors, for men and lady</p>
+                <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                  <a href="#!" class="btn btn-primary shadow-0 me-1 btnCard">Select</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+
+        <!-- Pagination -->
+       
+        <!-- Pagination -->
+      </div>
+    </div>
+  </div>            
+</section>
+<!-- sidebar + content -->
+
+    </main>
+   
+
+</body>
+</html>

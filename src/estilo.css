@@ -1,0 +1,93 @@
+
+.mainpage{
+    background-image: url("https://s1.1zoom.me/b5050/540/BUGATTI_2019_La_Voiture_Noire_Side_Black_Black_568141_1920x1080.jpg");
+}
+
+#logoEncabezado{
+    width: 8%;
+    height: 8%;
+}
+.logo2{
+    width: 20%;
+    height: 20%;
+}
+#degradado1{
+    color:#8e8b8c;
+}
+i{
+    width: 30%;
+}
+#buttonInfo{
+    margin-top: 35%;
+    margin-left: 46%;
+    border-radius: 20px;
+    color: #8e8b8c;
+}
+#buttonInfo:hover{
+    color: white;
+    background-color: #464445;
+}
+#buttonInfo>:hover{
+    color: white;   
+    background-color: #464445;
+}
+.bodyC{
+background-color: rgb(0, 0, 0);
+}
+.panel{
+    background-color: aliceblue;
+    padding-bottom: 40%;
+    margin-bottom: -47%;
+    opacity: 20%;
+    border-radius: 20px;
+}
+.panelPrincipal{
+    background-color: #313131;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding-bottom: 43%;
+    border-radius: 15px;
+    
+}
+.panelMenu{
+    opacity: 100%;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding-bottom: 43%;
+    margin-bottom: -80%;
+}
+.opcionesModificar img{
+    width: 5%;
+    margin-top: 5%;
+}
+#asiento{
+    width:5%;
+}
+#motor{
+    width:3%;
+}
+#llanta{
+    width: 3%;
+}
+#llanta{
+    width: 3%;
+}
+.encabezadoConfigurador{
+    background-color: #929292ec;
+    text-align: center;
+    }
+#optionsToModify{
+    text-align: center;
+}
+.btnCard{
+    margin-left: 35%;
+}
+.cardOption{
+    margin-top: 50%;
+
+}
+
+
+
+
+
