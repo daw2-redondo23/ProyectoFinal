@@ -1,66 +1,161 @@
 <!DOCTYPE html>
-<html lang="es">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Proyecto Final</title>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
-    <!-- Google Fonts Roboto -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
-    <!--Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-    <!--Style-->
-    <link rel="stylesheet" href="src/estilo.css">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>About Us</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  <!--Style-->
+  <link rel="stylesheet" href="src/estilo.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 </head>
-
-<body class="mainpageAbout">
-      <!--Main Navigation-->
+<body class="mainPageAbout">
   <header>
-    <!-- Navbar -->
-	<nav class="navbar navbar-expand-lg navbar-dark p-3" id="navbarMenu">
-    <div class="container-fluid">
-      <a href="index.html"><img src="/img/logo2.png" alt="" id="logoEncabezado" class="m-2"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class=" collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav ms-auto ">
-          <li class="nav-item">
-            <a class="nav-link mx-2" aria-current="page" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mx-2" href="/configurator.html">Configurator</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mx-2 active" href="/about.html">About&nbspUs</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <nav class="navbar navbar-expand-lg navbar-dark p-3" id="navbarMenu">
+      <div class="container-fluid">
+        <a href="index.html"><img src="/img/logo2.png" alt="logo" id="logoEncabezado" class="m-2"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link mx-2" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="/configurator.html">Configurator</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2 active" href="/about.html">About&nbspUs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Owner
-            </a>
-            <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item bg-dark text-white" href="https://www.ensalza.com/blog/sobre-nosotros-pagina/">Login</a></li>
-              <li><a class="dropdown-item bg-dark text-white" href="https://www.ensalza.com/blog/sobre-nosotros-pagina/">Register</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href=""><img src="" alt=""></a>
-          </li>
-        </ul>
+              </a>
+              <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item bg-dark text-white" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
+                <li><a class="dropdown-item bg-dark text-white" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
     </nav>
-    <!-- Navbar -->
   </header>
   <main>
-       
-  </main>
-  
- 
-  <footer></footer>
+    <section class="hero">
+      <h1>About Us</h1>
+      <p>We are a team of young automotive enthusiasts.</p>
+    </section>
 
-  
+    <section class="features">
+      <div>
+        <h2>Misión</h2>
+        <p>Nuestra misión es brindar soluciones de alta calidad para los entusiastas de los automóviles.</p>
+      </div>
+
+      <div>
+        <h2>Visión</h2>
+        <p>Nuestra visión es convertirnos en líderes del mercado en la venta de productos y servicios automotrices.</p>
+      </div>
+
+      <div>
+        <h2>Valores</h2>
+        <p>Trabajamos con pasión, integridad y profesionalismo para brindar a nuestros clientes la mejor experiencia.</p>
+      </div>
+    </section>
+
+    <section class="team">
+      <h2>Nuestro Equipo</h2>
+
+      <div class="member">
+        <img src="img/persona1.jpg" alt="Miembro del equipo">
+        <h3>John Doe</h3>
+        <p>CEO</p>
+      </div>
+
+      <div class="member">
+        <img src="img/persona2.jpg" alt="Miembro del equipo">
+        <h3>Jane Smith</h3>
+        <p>CFO</p>
+      </div>
+    </section>
+  </main>
+  <!-- Modal Register-->
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="myform bg-dark">
+                <h1 class="text-center">Register</h1>
+                <form>
+                    <div class="mb-3 mt-4">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control bg-dark text-white" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control bg-dark text-white" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3 bg-dark">
+                      <input type="tel" class="form-control bg-dark text-white" id="phone" name="phone">
+                    </div>
+                    <button type="submit" class="btn btn-light mt-3">Register</button>
+                    <p>Already a member? <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login now</a></p>
+                </form>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+  <!-- Fin Modal Register-->
+   <!-- Modal Login-->
+   <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="myform bg-dark">
+                <h1 class="text-center">Login</h1>
+                <form>
+                    <div class="mb-3 mt-4">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control bg-dark text-white" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control bg-dark text-white" id="exampleInputPassword1">
+                    </div>
+                    <button type="submit" class="btn btn-light mt-3">LOGIN</button>
+                    <p>Not a member? <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Register now</a></p>
+                </form>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+   <!-- Fin Modal Login-->
+
+  <footer>
+    
+  </footer>
 </body>
+<script>
+  //Input de las banderas
+  const phoneInputField = document.querySelector("#phone");
+  const phoneInput = window.intlTelInput(phoneInputField, {
+    utilsScript:
+      "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js", });
+  document.querySelector('.iti__country-list').classList += ' bg-dark'
+  //Fin Input de las banderas
+</script>
 </html>
