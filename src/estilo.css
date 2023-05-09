@@ -506,7 +506,7 @@ body.mainPageAbout {
     width: 100%;
     min-height: 100%;
     padding: 15px;
-    display: -webkit-box;
+    display: -webkit-box; 
     display: -webkit-flex;
     display: -moz-box;
     display: -ms-flexbox;
@@ -515,17 +515,13 @@ body.mainPageAbout {
     justify-content: center;
     align-items: center;
     padding-bottom: 2%;
+    border-radius: 20px;
   }
   .container-contact1 {
     width: 1163px;
-    background: #444444;
+    background: #252525;
     border-radius: 10px;
     overflow: hidden;
-  
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -541,7 +537,8 @@ body.mainPageAbout {
   }
   
   .contact1-pic img {
-    max-width: 100%;
+    max-width: 1000%;
+    padding-left: 50%;
   }
   
   
