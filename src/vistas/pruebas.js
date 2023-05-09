@@ -1,6 +1,6 @@
 import { createClient } from '@supabase/supabase-js'
 
-export const pruebas = {
+export default {
     template: `<h1>Esto es la prueba de Supabase</h1>`,
     script: async ()=>{
         console.log('Esta es la vista para hacer pruebas del supabase');

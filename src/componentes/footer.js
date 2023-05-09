@@ -1,5 +1,5 @@
-export const footer = {
+export default {
     template: `
-        <h5>Esto sera el footer</h5>
+        <p class="pb-5">® Phoenix - Developed by Ruben & Joel</p>
     `
 }

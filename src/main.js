@@ -1,12 +1,16 @@
-import { footer } from "./componentes/footer";
+import footer from "./componentes/footer";
 import { header } from "./componentes/header";
-import { home } from "./vistas/home";
-import { pruebas } from "./vistas/pruebas";
+import { enrutador } from "./componentes/router";
+import about from "./vistas/about";
+import home from "./vistas/home";
+import pruebas from "./vistas/pruebas";
 
 document.querySelector('header').innerHTML = header.template
-document.querySelector('main').innerHTML = home.template
-document.querySelector('footer').innerHTML = footer.template
+header.script()
+enrutador.observadorRutas()
+window.location = '/#/home'
 
 //Supabase
-document.querySelector('main').innerHTML = pruebas.template
-pruebas.script()
+// document.querySelector('main').innerHTML = pruebas.template
+// pruebas.script()
+
