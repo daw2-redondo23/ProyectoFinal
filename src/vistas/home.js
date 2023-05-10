@@ -10,7 +10,8 @@ export default  {
         
     `,
     script: ()=>{
-      document.querySelector('.mainpageAbout').classList = "container-fluid mainpage"
-      document.querySelector('footer') = "a"
+      document.querySelector('footer').innerHTML = ""
+      document.querySelector('#divGrande').classList = "container-fluid mainpage"
+      
     }
 }
