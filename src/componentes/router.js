@@ -5,7 +5,10 @@ export const enrutador = {
         home: import('../vistas/home'),
         //Vistas de la pagina
         about: import('../vistas/about'),
-        configurador: import('../vistas/configurador')
+        configurador: import('../vistas/configurador'),
+        miPerfil: import("../vistas/miPerfil"),
+        verUsuarios: import("../vistas/usuarios"),
+        verPedidos: import("../vistas/pedidos")
 
     },
     router: async ()=>{

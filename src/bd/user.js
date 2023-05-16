@@ -26,6 +26,7 @@ export class User {
     const { data, error } = await supabase.auth.signInWithPassword(userData)
     if (error) {
       throw new Error(error.message)
+
     }
     console.log('usuario logeado', data.user)
     return new User(data.user.id, data.user.email)

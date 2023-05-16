@@ -1,5 +1,5 @@
 
-import { header } from "./componentes/header";
+import header from "./componentes/header";
 import { enrutador } from "./componentes/router";
 
 import pruebas from "./vistas/pruebas";
