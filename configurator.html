@@ -1,103 +1,61 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Configurator</title>
-     <!-- Font Awesome -->
-     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
-     <!-- Google Fonts Roboto -->
-     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
-     <!--Bootstrap-->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-     <!--Style-->
-     <link rel="stylesheet" href="src/estilo.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phoenix | Configurator</title>
+  <link rel="shortcut icon" href="/img/logo2.png">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  <!--Style-->
+  <link rel="stylesheet" href="src/estilo.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  <!--SweetAlert-->
+  <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
 </head>
-<body class="bodyAleron">
-      <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-dark p-3" id="navbarMenu">
-        <div class="container-fluid">
-          <a href="index.html"><img src="/img/logo2.png" alt="logo" id="logoEncabezado" class="m-2"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link mx-2" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mx-2 active" href="/configurator.html">Configurator</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mx-2" href="/about.html">About&nbspUs</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Owner
-                </a>
-                <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item bg-dark text-white" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
-                  <li><a class="dropdown-item bg-dark text-white" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+<style>
+</style>
+<body class="bodyConfi">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark p-3" id="navbarMenu">
+      <div class="container-fluid">
+        <a href="index.html"><img src="/img/logo2.png" alt="logo" id="logoEncabezado" class="m-2"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link mx-2" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2 active" href="/configurator.html">Configurator</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="/about.html">About&nbspUs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Owner
+              </a>
+              <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item bg-dark text-white" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
+                <li><a class="dropdown-item bg-dark text-white" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a></li>
+              </ul>
+            </li>
+          </ul>
         </div>
-      </nav>
-    </header>
-          <!-- Fin Navbar -->
-    <main>
-    <!--Main Navigation-->
-<header>
-  <!-- Heading carrousel-->
-  <div class="encabezadoConfigurador mb-4">
-    <div class="container py-4">
-      <h2 class="text-white mt-2">CONFIGURATOR</h2>
-    </div>
-  </div>
-  <nav class="navbar navbar-expand-lg navbar-dark p-3" id="navbarMenuConfig">
-    <div class="container-fluid justify-content-center">
-      <div class="" id="navbarNavDropdown ">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link mx-2 active" href="aleron.html">Aileron</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mx-2" href="tire.html">Tire</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mx-2" href="#">Engine</a>
-          </li>
-        </ul>
       </div>
-    </div>
     </nav>
-</header>
-  <!-- Fin Heading carrousel -->
-<div id="carouselExampleControls" class="carousel slide shadow" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="img/aleron1.jpg" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="img/aleron2.jpg" class="d-block w-100" alt="...">
-    </div>
-
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+  </header>
   <!-- Modal Register-->
   <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -126,7 +84,6 @@
       </div>
     </div>
 </div>
-  <!-- Fin Modal Register-->
    <!-- Modal Login-->
    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -152,9 +109,66 @@
       </div>
     </div>
 </div>
-   <!-- Fin Modal Login-->
-</main>
-</body>
+  <main>
+    <section>
+      <div class="contact1">
+        <div class="container-contact1 shadow p-5 mb-5 rounded">
+          <div class="totConf d-flex">
+            <div class="container inputConfig p-5">
+              <select id="engineSelect" class="form-select mt-5 bg-dark text-white" aria-label="Default select example" onchange="handleChange(this)">
+                <option value="" selected disabled>-- Select Engine --</option>
+                <option value="1">V8 4.3 liters</option>
+                <option value="2">V10 5.0 liters</option>
+                <option value="3">v12 6.3 liters</option>
+              </select>
+              <select id="tireSelect" class="form-select mt-5 bg-dark text-white" aria-label="Default select example" onchange="handleChange(this)">
+                <option value="" selected disabled>-- Select Tires --</option>
+                <option value="4">Black - HRE Wheels</option>
+                <option value="5">Silver - HRE Wheels</option>
+                <option value="6">Gold - HRE Wheels</option>
+              </select>
+              <select id="aleronSelect" class="form-select mt-5 bg-dark text-white" aria-label="Default select example"  onchange="handleChange(this)">
+                <option value="" selected disabled>-- Select Aileron --</option>
+                <option value="7">Low</option>
+                <option value="8">High</option>
+                <option value="9">-- No --</option>
+              </select>
+            </div>
+            <img id="selectedImage" src="" alt="imagenes" class="seleccionador" />
+          </div>
+          
+        </div>
+      </div>
+    </section>
+      </main>
+      <footer></footer>
+      </body>
+      <script>
+        function handleChange(selectElement) {
+          let selectedValue = selectElement.value;
+          let selectedImage = document.getElementById('selectedImage');
+          if (selectedValue === '1') {
+            selectedImage.src = '/img/v8cad.png';
+            selectElement.selectedIndex =0 ;
+          } else if (selectedValue === '2') {
+            selectedImage.src = '/img/v10cad.png';
+          } else if (selectedValue === '3') {
+            selectedImage.src = '/img/v12cad.png';
+          } else if(selectedValue === '4'){
+            selectedImage.src = '/img/tire1.png';
+          }else if(selectedValue === '5'){
+            selectedImage.src = '/img/tire2.png';
+        }else if(selectedValue === '6'){
+            selectedImage.src = '/img/tire3.jpg';
+          }else if(selectedValue === '7'){
+            selectedImage.src = '/img/aleron1.jpg';
+        }else if(selectedValue === '8'){
+            selectedImage.src = '/img/aleron2.jpg';
+  }else if(selectedValue === '9'){
+            selectedImage.src = '/img/aleron3.jpg';}}
+      </script>
+      
+
 <script>
   //Input de las banderas
   const phoneInputField = document.querySelector("#phone");

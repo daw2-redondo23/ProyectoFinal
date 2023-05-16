@@ -15,12 +15,6 @@
    width: 130%;
 }
 
-#navbarMenu{
-    margin-right: 5%;
-}
-#navbarMenu li{
-    margin-left: 3%;
-}
 #logoEncabezado{
     width: 8%;
     height: 8%;
@@ -58,7 +52,7 @@ background-color: rgb(0, 0, 0);
 .bodyAleron{
     overflow: hidden;
     background-color: black;
-    background-image: url("https://p4.wallpaperbetter.com/wallpaper/852/926/500/line-background-black-texture-wallpaper-preview.jpg");
+   
 }
 .panel{
     background-color: #313131;
@@ -98,10 +92,6 @@ background-color: rgb(0, 0, 0);
 #llanta{
     width: 3%;
 }
-.encabezadoConfigurador{
-    background-color: #929292ec;
-    text-align: center;
-    }
 #optionsToModify{
     text-align: center;
 }
@@ -801,7 +791,6 @@ body.mainPageAbout {
     opacity: 1;
     transition: opacity 0.5s linear;
   }
-
   .hero2:hover h1 {
     opacity: 0;
   }
@@ -811,7 +800,6 @@ body.mainPageAbout {
     opacity: 1;
     transition: opacity 0.5s linear;
   }
-
   .hero2:hover p {
     opacity: 0;
   }
@@ -825,3 +813,26 @@ body.mainPageAbout {
   .informationPage{
     overflow: hidden;
   }
+  .bodyConfi{
+    background-color:  #1c1c1c;
+  }
+  .inputConfig{
+    padding-right: 55%;
+    padding-top: 10%;
+    flex: 1;
+    margin-right: 20px;
+  }
+  .seleccionador{
+    width: 600px; /* Ajusta el tamaño de la imagen según tus necesidades */
+    height: 400px;
+    padding-left: 20%;
+  }
+  select{
+    width: 150%;
+  }
+  .container-contact1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
