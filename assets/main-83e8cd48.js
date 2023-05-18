@@ -6277,13 +6277,13 @@ const header = {
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link mx-2 active" aria-current="page" href="#/home">Home</a>
+              <a class="nav-link mx-2 active" aria-current="page" href="ProyectoFinal/#/home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link mx-2" href="#/configurador">Configurator</a>
+              <a class="nav-link mx-2" href="ProyectoFinal/#/configurador">Configurator</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link mx-2" href="#/about">About&nbspUs</a>
+              <a class="nav-link mx-2" href="ProyectoFinal/#/about">About&nbspUs</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
