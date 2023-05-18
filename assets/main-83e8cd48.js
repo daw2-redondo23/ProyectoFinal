@@ -6479,5 +6479,5 @@ const enrutador = {
 document.querySelector("header").innerHTML = header.template;
 header.script();
 enrutador.observadorRutas();
-window.location = "ProyectoFinal/#/home";
+window.location = "/ProyectoFinal/#/home";
 const estilo = "";
