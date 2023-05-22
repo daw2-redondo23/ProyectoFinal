@@ -43,27 +43,32 @@ export default {
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             <div class="myform bg-dark">
                 <h1 class="text-center">Register</h1>
-                <form id="formRegistro">
+                <form id="formRegistro" class="needs-validation" novalidate>
                     <div class="mb-3 mt-4">
                         <label for="nameInputRegistro" class="form-label">Name</label>
-                        <input type="text" class="form-control bg-dark text-white" id="nameInputRegistro">
+                        <input type="text" class="form-control bg-dark text-white" id="nameInputRegistro" pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$" required>
                     </div>
                     <div class="mb-3">
                         <label for="surnameInputRegistro" class="form-label">Surname</label>
-                        <input type="text" class="form-control bg-dark text-white" id="surnameInputRegistro">
+                        <input type="text" class="form-control bg-dark text-white" id="surnameInputRegistro"  pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$" required>
                     </div>
                     <div class="mb-3">
                         <label for="emailInputRegistro" class="form-label">Email address</label>
-                        <input type="email" class="form-control bg-dark text-white" id="emailInputRegistro" aria-describedby="emailHelp">
+                        <input type="email" class="form-control bg-dark text-white" id="emailInputRegistro" aria-describedby="emailHelp" required>
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control bg-dark text-white" id="passwordInputRegistro">
-                    </div>
+                        <label for="passwordInputRegistro" class="form-label">Password</label>
+                        <input type="password" class="form-control bg-dark text-white" id="passwordInputRegistro" minlength="6" required>
+                        <!-- mensaje si valida -->
+                          <div class="valid-feedback">Correcto</div>
+                        <!-- mensaje si no valida -->
+                          <div class="invalid-feedback">Incorrecto, la contraseña necesita una letra mayúscula una minúscula y un número</div>
+
+                        </div>
                     <div class="mb-3 bg-dark">
-                      <input type="tel" class="form-control bg-dark text-white" id="phone">
+                      <input type="tel" class="form-control bg-dark text-white" id="phone" required>
                     </div>
-                    <button id="registerBtn" type="submit" class="btn btn-light mt-3" data-bs-toggle="modal" data-bs-target="#loginModal">Register</button>
+                    <button id="registerBtn" type="submit" class="btn btn-light mt-3"  >Register</button>
                     <p>Already a member? <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login now</a></p>
                 </form>
             </div>
@@ -81,11 +86,11 @@ export default {
                 <h1 class="text-center">Login</h1>
                 <form id="formLogin">
                     <div class="mb-3 mt-4">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <label for="emailInputLogin" class="form-label">Email address</label>
                         <input type="email" class="form-control bg-dark text-white" id="emailInputLogin" aria-describedby="emailHelp">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <label for="passwordInputLogin" class="form-label">Password</label>
                         <input type="password" class="form-control bg-dark text-white" id="passwordInputLogin">
                     </div>
                     <button id="loginBtn" type="submit" class="btn btn-light mt-3" data-bs-dismiss="modal">LOGIN</button>
@@ -139,7 +144,6 @@ export default {
                 document.querySelector('#logout').addEventListener("click", async(e)=>{
                 await User.logout()
                 location.reload()
-
                 })
               }
               
@@ -148,51 +152,54 @@ export default {
             } catch (error) {
               
             }
-
-
-
-
-
-
-          //Funcionalidad del registro
-          document.querySelector('#formRegistro').addEventListener("submit", async(e)=>{
-            e.preventDefault()
-
-            try {
-              //creo el usuario con los datos del email y el password
-              const user = {
-                email: document.querySelector('#emailInputRegistro').value,
-                password: document.querySelector('#passwordInputRegistro').value
-              }
-              //introduzco el usuario en la base de datos
-              const nuevoUsuario =  await User.create(user)
-              console.log(nuevoUsuario.id);
-
-              //creo el perfil con los datos de los inputs
-              const perfilNuevo = {
-                  nombre: document.querySelector('#nameInputRegistro').value,
-                  apellidos: document.querySelector('#surnameInputRegistro').value,
-                  email: document.querySelector('#emailInputRegistro').value,
-                  avatar: "avatar1.png",
-                  user_id: nuevoUsuario.id,
-                  telefono: document.querySelector('#phone').value
-              }
-
-              //introduzco el perfil en la base de datos
-             
-              await Perfil.create(perfilNuevo)
-              alert("Tienes que confirmar el correo")
-
-            } catch (error) {
-                alert(error)
-            }
             
-          })
+          //Funcionalidad del registro
+          document.querySelector('#registerBtn').addEventListener("click", async(e) => {
+            e.preventDefault();
+            console.log("Hola");
+            document.querySelector('#formRegistro').classList.add('was-validated');
+            
+            if (document.querySelector('#formRegistro').checkValidity()) {
+             
+              try {
+                //creo el usuario con los datos del email y el password
+                const user = {
+                  email: document.querySelector('#emailInputRegistro').value,
+                  password: document.querySelector('#passwordInputRegistro').value
+                }
+                //introduzco el usuario en la base de datos
+                const nuevoUsuario =  await User.create(user)
+                console.log(nuevoUsuario.id);
+ 
+                //creo el perfil con los datos de los inputs
+                const perfilNuevo = {
+                    nombre: document.querySelector('#nameInputRegistro').value,
+                    apellidos: document.querySelector('#surnameInputRegistro').value,
+                   email: document.querySelector('#emailInputRegistro').value,
+                    avatar: "avatar1.png",
+                    user_id: nuevoUsuario.id,
+                    telefono: document.querySelector('#phone').value
+                }
+ 
+                //introduzco el perfil en la base de datos
+              
+                await Perfil.create(perfilNuevo)
+                alert("Tienes que confirmar el correo")
+ 
+              } catch (error) {
+                  alert(error)
+              }
+            }
+          
+          });
+          
+          
+           
 
           //Funcionalidad del Login
           document.querySelector('#formLogin').addEventListener("submit", async(e)=>{
             e.preventDefault()
-
+            
             let usuarioLogin = {
               email: document.querySelector('#emailInputLogin').value,
               password: document.querySelector('#passwordInputLogin').value
