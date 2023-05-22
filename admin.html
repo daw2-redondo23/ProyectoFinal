@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Administración de Usuarios</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="src/estilo.css">
+</head>
+<body class="adminPanel">
+  <div class="container">
+    <h1 class="text-center text-white my-5">Administration</h1>
+    <table class="table table-striped table-dark" id="TablaAdmin">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Last name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Password</th>
+            <th scope="col">Options</th>
+          </tr>
+        </thead>
+        <tbody> 
+          <tr>
+            <th scope="row">Joel</th>
+            <td>Garcia</td>
+            <td>garciamanjonjoel@fpllefia.com</td>
+            <td>***********</td>
+            <td>
+                <button class="btn btn-primary">Edit</button>
+                <button class="btn btn-danger">Delete</button>
+              </td>
+          </tr>
+          <tr>
+            <th scope="row">Ruben</th>
+            <td>Redondo</td>
+            <td>redondocuadradoruben@fpllefia.com</td>
+            <td>***********</td>
+            <td>
+                <button class="btn btn-primary">Edit</button>
+                <button class="btn btn-danger">Delete</button>
+              </td>
+          </tr>
+          <tr>
+            <th scope="row">Sergio</th>
+            <td>Coto</td>
+            <td>cotodjsergio@fpllefia.com</td>
+            <td>***********</td>
+            <td>
+                <button class="btn btn-primary">Edit</button>
+                <button class="btn btn-danger">Delete</button>
+              </td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

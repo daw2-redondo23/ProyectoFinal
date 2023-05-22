@@ -112,34 +112,38 @@
   <main>
     <section>
       <div class="contact1">
-        <div class="container-contact1 shadow p-5 mb-5 rounded">
+        <div class="container-contact2 shadow p-5 mb-5 rounded">
           <div class="totConf d-flex">
-            <div class="container inputConfig p-5">
-              <select id="engineSelect" class="form-select mt-5 bg-dark text-white" aria-label="Default select example" onchange="handleChange(this)">
+            <div class="container inputConfig p-5 text-center">
+              <h6 class="text-white titulitos">Engine</h6>
+              <select id="engineSelect" class="form-select mt-5 bg-dark text-white w-100" aria-label="Default select example" onchange="handleChange(this)">
                 <option value="" selected disabled>-- Select Engine --</option>
                 <option value="1">V8 4.3 liters</option>
                 <option value="2">V10 5.0 liters</option>
                 <option value="3">v12 6.3 liters</option>
+            
               </select>
+              <h6 class="text-white mt-5 titulitos">Tire</h6>
               <select id="tireSelect" class="form-select mt-5 bg-dark text-white" aria-label="Default select example" onchange="handleChange(this)">
                 <option value="" selected disabled>-- Select Tires --</option>
                 <option value="4">Black - HRE Wheels</option>
                 <option value="5">Silver - HRE Wheels</option>
                 <option value="6">Gold - HRE Wheels</option>
               </select>
-              <select id="aleronSelect" class="form-select mt-5 bg-dark text-white" aria-label="Default select example"  onchange="handleChange(this)">
+              <h6 class="text-white mt-5 titulitos">Alieron</h6>
+              <select id="aleronSelect" class="form-select mt-5 bg-dark text-white" aria-label="Default select example" onchange="handleChange(this)">
                 <option value="" selected disabled>-- Select Aileron --</option>
                 <option value="7">Low</option>
                 <option value="8">High</option>
                 <option value="9">-- No --</option>
               </select>
             </div>
-            <img id="selectedImage" src="" alt="imagenes" class="seleccionador" />
+            <img id="selectedImage" src="/img/918.png" alt="imagenes" class="seleccionador" />
           </div>
-          
         </div>
       </div>
     </section>
+
       </main>
       <footer></footer>
       </body>
@@ -147,6 +151,7 @@
         function handleChange(selectElement) {
           let selectedValue = selectElement.value;
           let selectedImage = document.getElementById('selectedImage');
+          
           if (selectedValue === '1') {
             selectedImage.src = '/img/v8cad.png';
             selectElement.selectedIndex =0 ;
@@ -161,9 +166,9 @@
         }else if(selectedValue === '6'){
             selectedImage.src = '/img/tire3.jpg';
           }else if(selectedValue === '7'){
-            selectedImage.src = '/img/aleron1.jpg';
+            selectedImage.src = '/img/al1.png';
         }else if(selectedValue === '8'){
-            selectedImage.src = '/img/aleron2.jpg';
+            selectedImage.src = '/img/al2.png';
   }else if(selectedValue === '9'){
             selectedImage.src = '/img/aleron3.jpg';}}
       </script>
