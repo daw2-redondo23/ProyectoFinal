@@ -140,12 +140,15 @@
             </div>
             <img id="selectedImage" src="/img/918.png" alt="imagenes" class="seleccionador" />
           </div>
+          <div id="addCard"></div>
         </div>
       </div>
     </section>
 
       </main>
-      <footer></footer>
+      <footer>
+        <p class="pb-5">® Phoenix - Developed by Ruben & Joel</p>
+    </footer>
       </body>
       <script>
         function handleChange(selectElement) {
@@ -154,26 +157,43 @@
           
           if (selectedValue === '1') {
             selectedImage.src = '/img/v8cad.png';
+            document.querySelector('#addCard').innerHTML=`<div class="cardSetting">
+        <div class="card2"></div></div>`;
             selectElement.selectedIndex =0 ;
           } else if (selectedValue === '2') {
             selectedImage.src = '/img/v10cad.png';
+            document.querySelector('#addCard').innerHTML=`<div class="cardSetting">
+        <div class="card2"></div></div>`;
           } else if (selectedValue === '3') {
             selectedImage.src = '/img/v12cad.png';
+            document.querySelector('#addCard').innerHTML=`<div class="cardSetting">
+        <div class="card2"></div></div>`;
           } else if(selectedValue === '4'){
             selectedImage.src = '/img/tire1.png';
+            document.querySelector('#addCard').innerHTML=`<div class="cardSetting">
+        <div class="card2"></div></div>`;
           }else if(selectedValue === '5'){
             selectedImage.src = '/img/tire2.png';
+            document.querySelector('#addCard').innerHTML=`<div class="cardSetting">
+        <div class="card2"></div></div>`;
         }else if(selectedValue === '6'){
             selectedImage.src = '/img/tire3.jpg';
+            document.querySelector('#addCard').innerHTML=`<div class="cardSetting">
+        <div class="card2"></div></div>`;
           }else if(selectedValue === '7'){
             selectedImage.src = '/img/al1.png';
+            document.querySelector('#addCard').innerHTML=`<div class="cardSetting">
+        <div class="card2"></div></div>`;
         }else if(selectedValue === '8'){
             selectedImage.src = '/img/al2.png';
+            document.querySelector('#addCard').innerHTML=`<div class="cardSetting">
+        <div class="card2"></div></div>`;
   }else if(selectedValue === '9'){
             selectedImage.src = '/img/aleron3.jpg';}}
+          
       </script>
       
-
+      
 <script>
   //Input de las banderas
   const phoneInputField = document.querySelector("#phone");
