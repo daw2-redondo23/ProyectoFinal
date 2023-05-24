@@ -6270,20 +6270,20 @@ const header = {
   template: `<!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark p-3" id="navbarMenu">
       <div class="container-fluid">
-        <a href="index.html"><img src="/img/logo2.png" alt="logo" id="logoEncabezado" class="m-2"></a>
+        <a href="#/home"><img src="/img/logo2.png" alt="logo" id="logoEncabezado" class="m-2"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link mx-2 active" aria-current="page" href="ProyectoFinal/#/home">Home</a>
+              <a class="nav-link mx-2 active" aria-current="page" href="#/home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link mx-2" href="ProyectoFinal/#/configurador">Configurator</a>
+              <a class="nav-link mx-2" href="#/configurador">Configurator</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link mx-2" href="ProyectoFinal/#/about">About&nbspUs</a>
+              <a class="nav-link mx-2" href="#/about">About&nbspUs</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -6308,27 +6308,32 @@ const header = {
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             <div class="myform bg-dark">
                 <h1 class="text-center">Register</h1>
-                <form id="formRegistro">
+                <form id="formRegistro" class="needs-validation" novalidate>
                     <div class="mb-3 mt-4">
                         <label for="nameInputRegistro" class="form-label">Name</label>
-                        <input type="text" class="form-control bg-dark text-white" id="nameInputRegistro">
+                        <input type="text" class="form-control bg-dark text-white" id="nameInputRegistro" pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑs]+$" required>
                     </div>
                     <div class="mb-3">
                         <label for="surnameInputRegistro" class="form-label">Surname</label>
-                        <input type="text" class="form-control bg-dark text-white" id="surnameInputRegistro">
+                        <input type="text" class="form-control bg-dark text-white" id="surnameInputRegistro"  pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑs]+$" required>
                     </div>
                     <div class="mb-3">
                         <label for="emailInputRegistro" class="form-label">Email address</label>
-                        <input type="email" class="form-control bg-dark text-white" id="emailInputRegistro" aria-describedby="emailHelp">
+                        <input type="email" class="form-control bg-dark text-white" id="emailInputRegistro" aria-describedby="emailHelp" required>
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control bg-dark text-white" id="passwordInputRegistro">
-                    </div>
+                        <label for="passwordInputRegistro" class="form-label">Password</label>
+                        <input type="password" class="form-control bg-dark text-white" id="passwordInputRegistro" minlength="6" required>
+                        <!-- mensaje si valida -->
+                          <div class="valid-feedback">Correcto</div>
+                        <!-- mensaje si no valida -->
+                          <div class="invalid-feedback">Incorrecto, la contraseña necesita una letra mayúscula una minúscula y un número</div>
+
+                        </div>
                     <div class="mb-3 bg-dark">
-                      <input type="tel" class="form-control bg-dark text-white" id="phone">
+                      <input type="tel" class="form-control bg-dark text-white" id="phone" required>
                     </div>
-                    <button id="registerBtn" type="submit" class="btn btn-light mt-3" data-bs-toggle="modal" data-bs-target="#loginModal">Register</button>
+                    <button id="registerBtn" type="submit" class="btn btn-light mt-3"  >Register</button>
                     <p>Already a member? <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login now</a></p>
                 </form>
             </div>
@@ -6346,11 +6351,11 @@ const header = {
                 <h1 class="text-center">Login</h1>
                 <form id="formLogin">
                     <div class="mb-3 mt-4">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <label for="emailInputLogin" class="form-label">Email address</label>
                         <input type="email" class="form-control bg-dark text-white" id="emailInputLogin" aria-describedby="emailHelp">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <label for="passwordInputLogin" class="form-label">Password</label>
                         <input type="password" class="form-control bg-dark text-white" id="passwordInputLogin">
                     </div>
                     <button id="loginBtn" type="submit" class="btn btn-light mt-3" data-bs-dismiss="modal">LOGIN</button>
@@ -6399,37 +6404,45 @@ const header = {
       }
     } catch (error) {
     }
-    document.querySelector("#formRegistro").addEventListener("submit", async (e) => {
+    document.querySelector("#registerBtn").addEventListener("click", async (e) => {
       e.preventDefault();
-      try {
-        const user = {
-          email: document.querySelector("#emailInputRegistro").value,
-          password: document.querySelector("#passwordInputRegistro").value
-        };
-        const nuevoUsuario = await User.create(user);
-        console.log(nuevoUsuario.id);
-        const perfilNuevo = {
-          nombre: document.querySelector("#nameInputRegistro").value,
-          apellidos: document.querySelector("#surnameInputRegistro").value,
-          email: document.querySelector("#emailInputRegistro").value,
-          avatar: "avatar1.png",
-          user_id: nuevoUsuario.id,
-          telefono: document.querySelector("#phone").value
-        };
-        await Perfil.create(perfilNuevo);
-        alert("Tienes que confirmar el correo");
-      } catch (error) {
-        alert(error);
+      console.log("Hola");
+      document.querySelector("#formRegistro").classList.add("was-validated");
+      if (document.querySelector("#formRegistro").checkValidity()) {
+        try {
+          const user = {
+            email: document.querySelector("#emailInputRegistro").value,
+            password: document.querySelector("#passwordInputRegistro").value
+          };
+          const nuevoUsuario = await User.create(user);
+          console.log(nuevoUsuario.id);
+          const perfilNuevo = {
+            nombre: document.querySelector("#nameInputRegistro").value,
+            apellidos: document.querySelector("#surnameInputRegistro").value,
+            email: document.querySelector("#emailInputRegistro").value,
+            avatar: "avatar1.png",
+            user_id: nuevoUsuario.id,
+            telefono: document.querySelector("#phone").value
+          };
+          await Perfil.create(perfilNuevo);
+          alert("Tienes que confirmar el correo");
+        } catch (error) {
+          alert(error);
+        }
       }
     });
     document.querySelector("#formLogin").addEventListener("submit", async (e) => {
       e.preventDefault();
-      let usuarioLogin = {
-        email: document.querySelector("#emailInputLogin").value,
-        password: document.querySelector("#passwordInputLogin").value
-      };
-      await User.login(usuarioLogin);
-      location.reload();
+      try {
+        let usuarioLogin = {
+          email: document.querySelector("#emailInputLogin").value,
+          password: document.querySelector("#passwordInputLogin").value
+        };
+        await User.login(usuarioLogin);
+        location.reload();
+      } catch (error) {
+        alert(error);
+      }
     });
   }
 };
@@ -6437,13 +6450,14 @@ const enrutador = {
   //Aqui estaran todas las rutas que usaremos para cambiar entre paginas
   rutas: {
     //el inicio sera el home
-    home: __vitePreload(() => import("./home-1702965f.js"), true ? [] : void 0, import.meta.url),
+    home: __vitePreload(() => import("./home-a468c0d8.js"), true ? [] : void 0, import.meta.url),
     //Vistas de la pagina
-    about: __vitePreload(() => import("./about-00b5ebb9.js"), true ? [] : void 0, import.meta.url),
+    about: __vitePreload(() => import("./about-20861926.js"), true ? [] : void 0, import.meta.url),
     configurador: __vitePreload(() => import("./configurador-56a3ad46.js"), true ? [] : void 0, import.meta.url),
-    miPerfil: __vitePreload(() => import("./miPerfil-5334f9fe.js"), true ? [] : void 0, import.meta.url),
+    miPerfil: __vitePreload(() => import("./miPerfil-f9181686.js"), true ? ["./miPerfil-f9181686.js","./pedidos-b8949e0c.js"] : void 0, import.meta.url),
     verUsuarios: __vitePreload(() => import("./usuarios-791ef8f3.js"), true ? [] : void 0, import.meta.url),
-    verPedidos: __vitePreload(() => import("./pedidos-7633618f.js"), true ? [] : void 0, import.meta.url)
+    verPedidos: __vitePreload(() => import("./pedidos-5be9c231.js"), true ? ["./pedidos-5be9c231.js","./pedidos-b8949e0c.js"] : void 0, import.meta.url),
+    information: __vitePreload(() => import("./information-cfc126e8.js"), true ? [] : void 0, import.meta.url)
   },
   router: async () => {
     const pathCompleto = window.location.hash;
@@ -6479,5 +6493,10 @@ const enrutador = {
 document.querySelector("header").innerHTML = header.template;
 header.script();
 enrutador.observadorRutas();
-window.location = "/ProyectoFinal/#/home";
+window.location = "/#/home";
 const estilo = "";
+export {
+  Perfil as P,
+  User as U,
+  supabase as s
+};

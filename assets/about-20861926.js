@@ -89,7 +89,7 @@ const about = {
         text: "Your email has been sent successfully"
       });
     });
-    document.querySelector(".mainpage").classList = "mainpageAbout";
+    document.querySelector("#divGrande").classList = "mainpageAbout";
     document.querySelector("footer").innerHTML = footer.template;
   }
 };
