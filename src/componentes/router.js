@@ -8,7 +8,8 @@ export const enrutador = {
         configurador: import('../vistas/configurador'),
         miPerfil: import("../vistas/miPerfil"),
         verUsuarios: import("../vistas/usuarios"),
-        verPedidos: import("../vistas/pedidos")
+        verPedidos: import("../vistas/pedidos"),
+        information: import("../vistas/information")
 
     },
     router: async ()=>{

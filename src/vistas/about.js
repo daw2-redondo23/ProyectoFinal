@@ -87,7 +87,7 @@ export default  {
           });
       })
        
-        document.querySelector('.mainpage').classList = "mainpageAbout"
+        document.querySelector('#divGrande').classList = "mainpageAbout"
         document.querySelector('footer').innerHTML = footer.template
 
   }

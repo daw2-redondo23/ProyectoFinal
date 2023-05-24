@@ -5,7 +5,7 @@ export default {
     template: `<!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark p-3" id="navbarMenu">
       <div class="container-fluid">
-        <a href="index.html"><img src="/img/logo2.png" alt="logo" id="logoEncabezado" class="m-2"></a>
+        <a href="#/home"><img src="/img/logo2.png" alt="logo" id="logoEncabezado" class="m-2"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -150,7 +150,7 @@ export default {
             }
               
             } catch (error) {
-              
+               
             }
             
           //Funcionalidad del registro
@@ -200,17 +200,17 @@ export default {
           document.querySelector('#formLogin').addEventListener("submit", async(e)=>{
             e.preventDefault()
             
-            let usuarioLogin = {
-              email: document.querySelector('#emailInputLogin').value,
-              password: document.querySelector('#passwordInputLogin').value
-            }
-            await User.login(usuarioLogin)
-            location.reload()
+            
 
             try {
-              
+              let usuarioLogin = {
+                email: document.querySelector('#emailInputLogin').value,
+                password: document.querySelector('#passwordInputLogin').value
+              }
+              await User.login(usuarioLogin)
+              location.reload()
             } catch (error) {
-              alert(error)
+                alert(error)
             }
           })
 

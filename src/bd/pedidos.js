@@ -2,12 +2,13 @@ import { supabase } from "./supabase";
 
 export class Pedidos {
     //Mapping de las propiedades de la tabla pedidos
-    constructor (id = null, created_at = null, id_coche = null, nombre = null, id_perfil = null){
+    constructor (id = null, numeroPedido = null, created_at = null, id_coche = null, id_perfil = null, precio = null){
         this.id = id
+        this.numeroPedido = numeroPedido
         this.created_at = created_at
         this.id_coche = id_coche
-        this.nombre = nombre
         this.id_perfil = id_perfil
+        this.precio = precio
     }
 
     static async getAll(){
@@ -19,8 +20,8 @@ export class Pedidos {
             throw new Error(error.message)
         }
         //devuelvo los valores de la tabla pedidos
-        return pedido.map(({id, created_at, id_coche, nombre, id_perfil}) => {
-            return new Pedidos(id, created_at, id_coche, nombre, id_perfil)
+        return pedido.map(({id, numeroPedido, created_at, id_coche,  id_perfil, precio}) => {
+            return new Pedidos(id, numeroPedido, created_at, id_coche, id_perfil, precio)
         })
     }
 
@@ -35,7 +36,23 @@ export class Pedidos {
             throw new Error(error.message)
         }
         //devuelvo los valores de la tabla pedido con el id que le paso
-            return new Pedidos(pedido.id, pedido.created_at, pedido.id_coche, pedido.nombre, pedido.id_perfil)
+            return new Pedidos(pedido.id, pedido.numeroPedido, pedido.created_at, pedido.id_coche, pedido.id_perfil, pedido.precio)
+    }
+
+    static async getAllByPerfilId(id) {
+       
+        let { data: pedido, error } = await supabase
+            .from('pedidos')
+            .select('*')
+            .eq('id_perfil', id)
+            .order('created_at', { ascending: true })
+            if(error) {
+            throw new Error(error.message)
+        }
+        //devuelvo los valores de la tabla pedido con el id que le paso
+        return pedido.map(({id, numeroPedido, created_at, id_coche, id_perfil, precio}) => {
+            return new Pedidos(id, numeroPedido, created_at, id_coche, id_perfil, precio)
+        })
     }
 
     //funcion para crear un pedido
@@ -44,6 +61,7 @@ export class Pedidos {
             .from('pedidos')
             .insert(pedidoObjeto)
             .select()
+            
 
         if(error){
             throw new Error(error.message)
