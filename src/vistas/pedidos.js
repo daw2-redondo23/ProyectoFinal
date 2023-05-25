@@ -24,8 +24,6 @@ export default {
       </table>
     </div>
                       
-            
-      
   </div>`,
     script: async()=>{
         console.log('Esta es la ventana de los pedidos');
@@ -41,18 +39,18 @@ export default {
                     let html = '';
                     for (const elemento of pedidos) {
                     const perfil = await Perfil.getById(elemento.id_perfil);
-                    html += `<tr>
-                        <th scope="row">1</th>
-                        <td>${elemento.numeroPedido}</td>
-                        <td>${perfil.nombre}</td>
-                        <td>${perfil.email}</td>
-                        <td>Edinburgh</td>
-                        <td>${elemento.precio}$</td>
-                        <td>
-                        <button  data-id="${elemento.id}" type="button" class="btn btn-danger ms-3 btnEliminar">Delete</button>
-                        </td>
-                    </tr>`;
-                    }
+                        html += `<tr>
+                            <th scope="row">1</th>
+                            <td>${elemento.numeroPedido}</td>
+                            <td>${perfil.nombre}</td>
+                            <td>${perfil.email}</td>
+                            <td>Edinburgh</td>
+                            <td>${elemento.precio}$</td>
+                            <td>
+                            <button  data-id="${elemento.id}" type="button" class="btn btn-danger ms-3 btnEliminar">Delete</button>
+                            </td>
+                        </tr>`;
+                        }
                     console.log(html);
                     document.querySelector('tbody').innerHTML = html
 
@@ -66,17 +64,15 @@ export default {
 
                                 await Pedidos.borrar(id)
                                 alert("Pedido eliminado")
-                                location.reload()
+                                window.location.href = '#/verPedidos' 
 
                             } catch (error) {
                                 alert(error)
                             }
-                             
-                            
+     
                         })
                         
                       })
-
 
                 }
                 else{
@@ -94,7 +90,6 @@ export default {
                         <td>Bloqueado</td>
                     </tr>`;
                     }
-                    console.log(html);
                     document.querySelector('tbody').innerHTML = html
                 }
             } catch (error) {

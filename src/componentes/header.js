@@ -108,7 +108,7 @@ export default {
               utilsScript:
                 "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js", 
             });
-            console.log(phoneInput);
+
 
             document.querySelector('.iti__country-list').classList += ' bg-dark'
           
@@ -138,6 +138,7 @@ export default {
    
                 document.querySelector('#navbarDropdownMenuLink').innerHTML = perfilUsuario.nombre
                 let listaPerfilLogeado = `<li><a href="/#/miPerfil" class="dropdown-item bg-dark text-white">Mi Perfil</a></li>
+                                          <li><a href="/#/verPedidos" class="dropdown-item bg-dark text-white">Mis Pedidos</a></li>
                                           <li id="logout"><a class="dropdown-item bg-dark text-white">Logout</a></li> 
                                         `
                 document.querySelector('#listaOpciones').innerHTML = listaPerfilLogeado

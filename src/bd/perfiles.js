@@ -3,7 +3,7 @@ import { supabase } from './supabase.js'
 
 export class Perfil {
   // Mapping de propiedades de la tabla perfiles
-  constructor (id = null, created_at = null, nombre = null, apellidos = null, user_id = null, avatar = null, email = null, telefono = null, rol = null) {
+  constructor (id = null, created_at = null, nombre = null, apellidos = null, user_id = null, avatar = null, email = null, telefono = null, rol = null, direccion = null, codPostal = null, pais = null, ciudad = null) {
     this.id = id
     this.created_at = created_at
     this.nombre = nombre
@@ -13,6 +13,10 @@ export class Perfil {
     this.avatar = avatar
     this.telefono = telefono
     this.rol = rol
+    this.direccion = direccion
+    this.codPostal = codPostal
+    this.pais = pais
+    this.ciudad = ciudad
   }
 
   // leer todos en orden descendiente a como se han creado
@@ -25,8 +29,8 @@ export class Perfil {
       throw new Error(error.message)
     }
     // devuelve array de objetos
-    return perfiles.map(({ id, created_at, nombre, apellidos, user_id, avatar, email, telefono, rol }) => {
-      return new Perfil(id, created_at, nombre, apellidos, user_id, estado, avatar, email, telefono, rol)
+    return perfiles.map(({ id, created_at, nombre, apellidos, user_id, avatar, email, telefono, rol, direccion, codPostal, pais, ciudad}) => {
+      return new Perfil(id, created_at, nombre, apellidos, user_id, avatar, email, telefono, rol, direccion, codPostal, pais, ciudad)
     })
   }
 
@@ -41,7 +45,7 @@ export class Perfil {
       throw new Error(error.message)
     }
     // Devuelve un nuevo objeto con los datos del registro
-    return new Perfil(perfil.id, perfil.created_at, perfil.nombre, perfil.apellidos, perfil.user_id, perfil.avatar, perfil.email, perfil.telefono, perfil.rol)
+    return new Perfil(perfil.id, perfil.created_at, perfil.nombre, perfil.apellidos, perfil.user_id, perfil.avatar, perfil.email, perfil.telefono, perfil.rol, perfil.direccion, perfil.codPostal, perfil.pais, perfil.ciudad)
   }
 
   // leer registro por id (método static que se puede leer desde la clase sin necesidad de crear una instancia)
@@ -55,7 +59,7 @@ export class Perfil {
       throw new Error(error.message)
     }
     // Devuelve un nuevo objeto con los datos del registro
-    return new Perfil(perfil.id, perfil.created_at, perfil.nombre, perfil.apellidos, perfil.user_id, perfil.avatar, perfil.email, perfil.telefono, perfil.rol)
+    return new Perfil(perfil.id, perfil.created_at, perfil.nombre, perfil.apellidos, perfil.user_id, perfil.avatar, perfil.email, perfil.telefono, perfil.rol, perfil.direccion, perfil.codPostal, perfil.pais, perfil.ciudad)
   }
 
   // crear registro (método static que se puede leer desde la clase sin necesidad de crear una instancia)

@@ -1,3 +1,5 @@
+import error404 from '../vistas/error404'
+
 export const enrutador = {
     //Aqui estaran todas las rutas que usaremos para cambiar entre paginas
     rutas: {
@@ -9,7 +11,8 @@ export const enrutador = {
         miPerfil: import("../vistas/miPerfil"),
         verUsuarios: import("../vistas/usuarios"),
         verPedidos: import("../vistas/pedidos"),
-        information: import("../vistas/information")
+        information: import("../vistas/information"),
+        error404: import("../vistas/error404")
 
     },
     router: async ()=>{
@@ -33,6 +36,7 @@ export const enrutador = {
         vista.script(parametro)
       } catch (error) {
         // Si se produce un error cargamos la vista 404
+        
         console.log(error)
       }
     }
@@ -44,7 +48,7 @@ export const enrutador = {
             const link = event.target
             if (link.tagName === 'A') {
               event.preventDefault()
-              // Obtenemos la ruta del enlace sin el .html
+              // Obtenemos la ruta del enlace sin el .html<
               const href = link.getAttribute('href')
               // Añadimos la nueva ruta al historial
       
