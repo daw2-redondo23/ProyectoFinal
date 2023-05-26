@@ -1,5 +1,5 @@
-import { P as Pedidos } from "./pedidos-a687a48e.js";
-import { U as User, P as Perfil } from "./main-5219a3af.js";
+import { P as Pedidos } from "./pedidos-2bb02d13.js";
+import { U as User, P as Perfil } from "./main-b7be8d17.js";
 const pedidos = {
   template: `
     <div class="mainOrders">

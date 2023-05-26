@@ -1,3 +1,4 @@
+import "./main-b7be8d17.js";
 const home = {
   template: ` <div class="container">
     <div class="row justify-content-center">

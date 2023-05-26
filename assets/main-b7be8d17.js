@@ -6290,7 +6290,7 @@ const header = {
               <a class="nav-link mx-2" href="#/about">About&nbspUs</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link mx-2 dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Owner
               </a>
               <ul id="listaOpciones" class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
@@ -6315,30 +6315,36 @@ const header = {
                 <form id="formRegistro" class="needs-validation" novalidate>
                     <div class="mb-3 mt-4">
                         <label for="nameInputRegistro" class="form-label">Name</label>
-                        <input type="text" class="form-control bg-dark text-white" id="nameInputRegistro" pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑs]+$" required>
+                        <input type="text" class="form-control bg-dark text-white" id="nameInputRegistro" pattern="[A-Za-z0-9]+" required>
+                        <!-- mensaje si no valida -->
+                          <div class="invalid-feedback">Incorrecto, solo se puede poner letras y números</div>
                     </div>
                     <div class="mb-3">
                         <label for="surnameInputRegistro" class="form-label">Surname</label>
-                        <input type="text" class="form-control bg-dark text-white" id="surnameInputRegistro"  pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑs]+$" required>
+                        <input type="text" class="form-control bg-dark text-white" id="surnameInputRegistro" pattern="[A-Za-z0-9]+" required>
+                        <!-- mensaje si no valida -->
+                          <div class="invalid-feedback pb-4">Incorrecto, solo se puede poner letras y números</div>
                     </div>
                     <div class="mb-3">
                         <label for="emailInputRegistro" class="form-label">Email address</label>
                         <input type="email" class="form-control bg-dark text-white" id="emailInputRegistro" aria-describedby="emailHelp" required>
+                        <!-- mensaje si no valida -->
+                          <div class="invalid-feedback">Incorrecto,el email es incorrecto</div>
                     </div>
                     <div class="mb-3">
                         <label for="passwordInputRegistro" class="form-label">Password</label>
-                        <input type="password" class="form-control bg-dark text-white" id="passwordInputRegistro" minlength="6" required>
-                        <!-- mensaje si valida -->
-                          <div class="valid-feedback">Correcto</div>
+                        <input type="password" class="form-control bg-dark text-white" id="passwordInputRegistro" minlength="6" pattern="(?=.*)(?=.*[a-z])(?=.*[A-Z]).{6,}" required> 
                         <!-- mensaje si no valida -->
-                          <div class="invalid-feedback">Incorrecto, la contraseña necesita una letra mayúscula una minúscula y un número</div>
+                          <div class="invalid-feedback">Incorrecto, la contraseña solo puede tener letras, numeros <br> y tiene que tener un mínimo de 6 carácteres</div>
 
-                        </div>
-                    <div class="mb-3 bg-dark">
+                    </div>
+                    
+                    <div class="mb-3 bg-dark pt-5">
                       <input type="tel" class="form-control bg-dark text-white" id="phone" required>
                     </div>
-                    <button id="registerBtn" type="submit" class="btn btn-light mt-3"  >Register</button>
-                    <p>Already a member? <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login now</a></p>
+                    <button id="registerBtn" type="submit" class="btn btn-light mt-3" >Register</button>
+                    <p>Already a member? <a href="" data-bs-toggle="modal" data-bs-target="#loginModal">Login now</a></p>
+
                 </form>
             </div>
         </div>
@@ -6363,7 +6369,7 @@ const header = {
                         <input type="password" class="form-control bg-dark text-white" id="passwordInputLogin">
                     </div>
                     <button id="loginBtn" type="submit" class="btn btn-light mt-3" data-bs-dismiss="modal">LOGIN</button>
-                    <p>Not a member? <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Register now</a></p>
+                    <p>Not a member? <a href="" data-bs-toggle="modal" data-bs-target="#registerModal">Register now</a></p>
                 </form>
             </div>
         </div>
@@ -6451,18 +6457,14 @@ const header = {
   }
 };
 const enrutador = {
-  //Aqui estaran todas las rutas que usaremos para cambiar entre paginas
   rutas: {
-    //el inicio sera el home
-    home: __vitePreload(() => import("./home-a468c0d8.js"), true ? [] : void 0, import.meta.url),
-    //Vistas de la pagina
+    home: __vitePreload(() => import("./home-7f1e01ff.js"), true ? [] : void 0, import.meta.url),
     about: __vitePreload(() => import("./about-20861926.js"), true ? [] : void 0, import.meta.url),
-    configurador: __vitePreload(() => import("./configurador-56a3ad46.js"), true ? [] : void 0, import.meta.url),
-    miPerfil: __vitePreload(() => import("./miPerfil-84b747f3.js"), true ? ["./miPerfil-84b747f3.js","./pedidos-a687a48e.js"] : void 0, import.meta.url),
-    verUsuarios: __vitePreload(() => import("./usuarios-ae837dd7.js"), true ? [] : void 0, import.meta.url),
-    verPedidos: __vitePreload(() => import("./pedidos-61e36ac3.js"), true ? ["./pedidos-61e36ac3.js","./pedidos-a687a48e.js"] : void 0, import.meta.url),
-    information: __vitePreload(() => import("./information-cfc126e8.js"), true ? [] : void 0, import.meta.url),
-    error404: __vitePreload(() => import("./error404-ddc616e7.js"), true ? [] : void 0, import.meta.url)
+    configurador: __vitePreload(() => import("./configurador-fd045d65.js"), true ? [] : void 0, import.meta.url),
+    miPerfil: __vitePreload(() => import("./miPerfil-ee9bd072.js"), true ? ["./miPerfil-ee9bd072.js","./pedidos-2bb02d13.js"] : void 0, import.meta.url),
+    verUsuarios: __vitePreload(() => import("./usuarios-81b7b3fa.js"), true ? [] : void 0, import.meta.url),
+    verPedidos: __vitePreload(() => import("./pedidos-1337d23d.js"), true ? ["./pedidos-1337d23d.js","./pedidos-2bb02d13.js"] : void 0, import.meta.url),
+    information: __vitePreload(() => import("./information-cfc126e8.js"), true ? [] : void 0, import.meta.url)
   },
   router: async () => {
     const pathCompleto = window.location.hash;
@@ -6472,11 +6474,21 @@ const enrutador = {
     if (componenteVista) {
       try {
         const vista = await componenteVista.default;
-        document.querySelector("main").innerHTML = vista.template;
-        vista.script(parametro);
+        if (vista) {
+          console.log("ruta correcta");
+          document.querySelector("main").innerHTML = vista.template;
+          vista.script(parametro);
+        } else {
+          console.log("vista error");
+          cargarVistaError404();
+        }
       } catch (error) {
         console.log(error);
+        cargarVistaError404();
       }
+    } else {
+      console.log("vista error");
+      cargarVistaError404();
     }
   },
   observadorRutas: () => {
@@ -6495,10 +6507,16 @@ const enrutador = {
     });
   }
 };
+async function cargarVistaError404() {
+  const error404 = await __vitePreload(() => import("./error404-5ebcdb5e.js"), true ? [] : void 0, import.meta.url);
+  const vista = error404.default;
+  document.querySelector("main").innerHTML = vista.template;
+  vista.script();
+}
 document.querySelector("header").innerHTML = header.template;
 header.script();
 enrutador.observadorRutas();
-window.location = "ProyectoFinal/#/home";
+window.location = "/#/home";
 const estilo = "";
 export {
   Perfil as P,
