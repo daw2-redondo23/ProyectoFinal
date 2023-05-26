@@ -49,7 +49,7 @@ export class Coche {
         if(error){
             throw new Error(error.message)
         }
-        return true
+        return data
     }
 
     static async borrar(id){

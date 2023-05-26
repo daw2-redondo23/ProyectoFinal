@@ -2,13 +2,14 @@ import { supabase } from "./supabase";
 
 export class Rueda {
     //Mapping de las propiedades de la tabla ruedas
-    constructor (id = null, created_at = null, pulgadas = null, medidas = null, ruido = null, fabricante = null ){
+    constructor (id = null, created_at = null, pulgadas = null, medidas = null, ruido = null, fabricante = null, img = null){
         this.id = id
         this.created_at = created_at
         this.pulgadas = pulgadas
         this.medidas = medidas
         this.ruido = ruido
         this.fabricante = fabricante
+        this.img = img
     }
 
     static async getAll(){
@@ -20,8 +21,8 @@ export class Rueda {
             throw new Error(error.message)
         }
         //devuelvo los valores de la tabla ruedas
-        return ruedas.map(({id, created_at, pulgadas, medidas, ruido, fabricante}) => {
-            return new Rueda(id, created_at, pulgadas, medidas, ruido, fabricante)
+        return ruedas.map(({id, created_at, pulgadas, medidas, ruido, fabricante, img}) => {
+            return new Rueda(id, created_at, pulgadas, medidas, ruido, fabricante, img)
         })
     }
 
@@ -36,7 +37,7 @@ export class Rueda {
             throw new Error(error.message)
         }
         //devuelvo los valores de la tabla ruedas con el id que le paso
-            return new Rueda(asiento.id, asiento.created_at, asiento.fabricante, asiento.material, asiento.color, asiento.modelo)
+            return new Rueda(ruedas.id, ruedas.created_at, ruedas.pulgadas, ruedas.medidas, ruedas.ruido, ruedas.fabricante, ruedas.img)
     }
 
     //funcion para crear un motor
@@ -54,7 +55,7 @@ export class Rueda {
 
     static async borrar(id){
         const { error } = await supabase
-        .from('asientos')
+        .from('ruedas')
         .delete()
         .eq('id', id)
   
