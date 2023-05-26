@@ -1,3 +1,5 @@
+import header from "../componentes/header"
+
 export default  {
     template: ` <div class="container">
     <div class="row justify-content-center">
@@ -11,7 +13,6 @@ export default  {
     `,
     script: ()=>{
       document.querySelector('footer').innerHTML = ""
-     
       document.querySelector('#divGrande').classList = "container-fluid mainpage"
       document.querySelector('main').classList = ""
       

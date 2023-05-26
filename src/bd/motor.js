@@ -2,7 +2,7 @@ import { supabase } from "./supabase";
 
 export class Motor {
     //Mapping de las propiedades de la tabla motor
-    constructor (id = null, created_at = null, fabricante = null, potencia = null, par = null, cilindrada = null, consumo = null, velocidadMax = null, aceleracion = null, numCilindros = null){
+    constructor (id = null, created_at = null, fabricante = null, potencia = null, par = null, cilindrada = null, consumo = null, velocidadMax = null, aceleracion = null, numCilindros = null, img = null){
         this.id = id
         this.created_at = created_at
         this.fabricante = fabricante
@@ -13,6 +13,7 @@ export class Motor {
         this.velocidadMax = velocidadMax
         this.aceleracion = aceleracion
         this.numCilindros = numCilindros
+        this.img = img
     }
 
     static async getAll(){
@@ -24,8 +25,8 @@ export class Motor {
             throw new Error(error.message)
         }
         //devuelvo los valores de la tabla motor
-        return motor.map(({id, created_at, fabricante, potencia, par, cilindrada, consumo, velocidadMax, aceleracion, numCilindros}) => {
-            return new Motor(id, created_at, fabricante, potencia, par, cilindrada, consumo, velocidadMax, aceleracion, numCilindros)
+        return motor.map(({id, created_at, fabricante, potencia, par, cilindrada, consumo, velocidadMax, aceleracion, numCilindros, img}) => {
+            return new Motor(id, created_at, fabricante, potencia, par, cilindrada, consumo, velocidadMax, aceleracion, numCilindros, img)
         })
     }
 
@@ -40,7 +41,7 @@ export class Motor {
             throw new Error(error.message)
         }
         //devuelvo los valores de la tabla motor con el id que le paso
-            return new Motor(motor.id, motor.created_at, motor.fabricante, motor.potencia, motor.par, motor.cilindrada, motor.consumo, motor.velocidadMax, motor.aceleracion, motor.numCilindros)
+            return new Motor(motor.id, motor.created_at, motor.fabricante, motor.potencia, motor.par, motor.cilindrada, motor.consumo, motor.velocidadMax, motor.aceleracion, motor.numCilindros, motor.img)
     }
 
     //funcion para crear un motor

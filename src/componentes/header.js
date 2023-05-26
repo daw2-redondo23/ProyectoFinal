@@ -21,7 +21,7 @@ export default {
               <a class="nav-link mx-2" href="#/about">About&nbspUs</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link mx-2 dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Owner
               </a>
               <ul id="listaOpciones" class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
@@ -46,30 +46,36 @@ export default {
                 <form id="formRegistro" class="needs-validation" novalidate>
                     <div class="mb-3 mt-4">
                         <label for="nameInputRegistro" class="form-label">Name</label>
-                        <input type="text" class="form-control bg-dark text-white" id="nameInputRegistro" pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$" required>
+                        <input type="text" class="form-control bg-dark text-white" id="nameInputRegistro" pattern="[A-Za-z0-9]+" required>
+                        <!-- mensaje si no valida -->
+                          <div class="invalid-feedback">Incorrecto, solo se puede poner letras y números</div>
                     </div>
                     <div class="mb-3">
                         <label for="surnameInputRegistro" class="form-label">Surname</label>
-                        <input type="text" class="form-control bg-dark text-white" id="surnameInputRegistro"  pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$" required>
+                        <input type="text" class="form-control bg-dark text-white" id="surnameInputRegistro" pattern="[A-Za-z0-9]+" required>
+                        <!-- mensaje si no valida -->
+                          <div class="invalid-feedback pb-4">Incorrecto, solo se puede poner letras y números</div>
                     </div>
                     <div class="mb-3">
                         <label for="emailInputRegistro" class="form-label">Email address</label>
                         <input type="email" class="form-control bg-dark text-white" id="emailInputRegistro" aria-describedby="emailHelp" required>
+                        <!-- mensaje si no valida -->
+                          <div class="invalid-feedback">Incorrecto,el email es incorrecto</div>
                     </div>
                     <div class="mb-3">
                         <label for="passwordInputRegistro" class="form-label">Password</label>
-                        <input type="password" class="form-control bg-dark text-white" id="passwordInputRegistro" minlength="6" required>
-                        <!-- mensaje si valida -->
-                          <div class="valid-feedback">Correcto</div>
+                        <input type="password" class="form-control bg-dark text-white" id="passwordInputRegistro" minlength="6" pattern="(?=.*)(?=.*[a-z])(?=.*[A-Z]).{6,}" required> 
                         <!-- mensaje si no valida -->
-                          <div class="invalid-feedback">Incorrecto, la contraseña necesita una letra mayúscula una minúscula y un número</div>
+                          <div class="invalid-feedback">Incorrecto, la contraseña solo puede tener letras, numeros <br> y tiene que tener un mínimo de 6 carácteres</div>
 
-                        </div>
-                    <div class="mb-3 bg-dark">
+                    </div>
+                    
+                    <div class="mb-3 bg-dark pt-5">
                       <input type="tel" class="form-control bg-dark text-white" id="phone" required>
                     </div>
-                    <button id="registerBtn" type="submit" class="btn btn-light mt-3"  >Register</button>
-                    <p>Already a member? <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login now</a></p>
+                    <button id="registerBtn" type="submit" class="btn btn-light mt-3" >Register</button>
+                    <p>Already a member? <a href="" data-bs-toggle="modal" data-bs-target="#loginModal">Login now</a></p>
+
                 </form>
             </div>
         </div>
@@ -94,7 +100,7 @@ export default {
                         <input type="password" class="form-control bg-dark text-white" id="passwordInputLogin">
                     </div>
                     <button id="loginBtn" type="submit" class="btn btn-light mt-3" data-bs-dismiss="modal">LOGIN</button>
-                    <p>Not a member? <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Register now</a></p>
+                    <p>Not a member? <a href="" data-bs-toggle="modal" data-bs-target="#registerModal">Register now</a></p>
                 </form>
             </div>
         </div>
