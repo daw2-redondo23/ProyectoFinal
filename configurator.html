@@ -20,6 +20,7 @@
   <!--SweetAlert-->
   <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+  
 </head>
 <style>
 </style>
@@ -137,10 +138,17 @@
                 <option value="8">High</option>
                 <option value="9">-- No --</option>
               </select>
+              <div class="moverBtn">
+                <button type="button" class="button mooverButton">
+                <span class="button__text">Shop now</span>
+                <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+              </button>
+              </div>
             </div>
             <img id="selectedImage" src="/img/918.png" alt="imagenes" class="seleccionador" />
           </div>
-          <div id="addCard"></div>
+          <div id="addCard">
+          </div>
         </div>
       </div>
     </section>
@@ -158,7 +166,17 @@
           if (selectedValue === '1') {
             selectedImage.src = '/img/v8cad.png';
             document.querySelector('#addCard').innerHTML=`<div class="cardSetting">
-        <div class="card2"></div></div>`;
+        <div class="card2">
+          <h5 class="text-white primerH1">By<p>Phoenix</p></h5>
+          <h5 class="text-white">Power<p>465HP</p></h5>
+          <h5 class="text-white">Pair<p>465HP</p></h5>
+          <h5 class="text-white">Displacement<p>465HP</p></h5>
+          <h5 class="text-white">MaxSpeed<p>465HP</p></h5>
+          <h5 class="text-white">Acceleration<p>465HP</p></h5>
+          <h5 class="text-white">Consumption<p>465HP</p></h5>
+         
+          
+          </div></div>`;
             selectElement.selectedIndex =0 ;
           } else if (selectedValue === '2') {
             selectedImage.src = '/img/v10cad.png';
@@ -189,8 +207,20 @@
             document.querySelector('#addCard').innerHTML=`<div class="cardSetting">
         <div class="card2"></div></div>`;
   }else if(selectedValue === '9'){
-            selectedImage.src = '/img/aleron3.jpg';}}
+            selectedImage.src = '/img/no.png';
+            document.querySelector('#addCard').innerHTML=``;
+          }}
+
           
+      document.querySelector('.mooverButton').addEventListener("click",()=>{
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Successful purchase!',
+          showConfirmButton: false,
+          timer: 1500
+})
+      });
       </script>
       
       
