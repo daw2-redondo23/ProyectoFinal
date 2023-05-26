@@ -61,7 +61,6 @@ export default {
                            
                             let id = event.target.dataset.id //recojo el id que tiene el botón
                             try {
-
                                 await Pedidos.borrar(id)
                                 alert("Pedido eliminado")
                                 window.location.href = '#/verPedidos' 
