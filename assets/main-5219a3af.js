@@ -6157,7 +6157,7 @@ const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 const supabase = createClient(supabaseUrl, supabaseKey);
 class Perfil {
   // Mapping de propiedades de la tabla perfiles
-  constructor(id = null, created_at = null, nombre = null, apellidos = null, user_id = null, avatar = null, email = null, telefono = null, rol = null) {
+  constructor(id = null, created_at = null, nombre = null, apellidos = null, user_id = null, avatar = null, email = null, telefono = null, rol = null, direccion = null, codPostal = null, pais = null, ciudad = null) {
     this.id = id;
     this.created_at = created_at;
     this.nombre = nombre;
@@ -6167,6 +6167,10 @@ class Perfil {
     this.avatar = avatar;
     this.telefono = telefono;
     this.rol = rol;
+    this.direccion = direccion;
+    this.codPostal = codPostal;
+    this.pais = pais;
+    this.ciudad = ciudad;
   }
   // leer todos en orden descendiente a como se han creado
   static async getAll() {
@@ -6174,8 +6178,8 @@ class Perfil {
     if (error) {
       throw new Error(error.message);
     }
-    return perfiles.map(({ id, created_at, nombre, apellidos, user_id, avatar, email, telefono, rol }) => {
-      return new Perfil(id, created_at, nombre, apellidos, user_id, estado, avatar, email, telefono, rol);
+    return perfiles.map(({ id, created_at, nombre, apellidos, user_id, avatar, email, telefono, rol, direccion, codPostal, pais, ciudad }) => {
+      return new Perfil(id, created_at, nombre, apellidos, user_id, avatar, email, telefono, rol, direccion, codPostal, pais, ciudad);
     });
   }
   // leer registro por id (método static que se puede leer desde la clase sin necesidad de crear una instancia)
@@ -6184,7 +6188,7 @@ class Perfil {
     if (error) {
       throw new Error(error.message);
     }
-    return new Perfil(perfil.id, perfil.created_at, perfil.nombre, perfil.apellidos, perfil.user_id, perfil.avatar, perfil.email, perfil.telefono, perfil.rol);
+    return new Perfil(perfil.id, perfil.created_at, perfil.nombre, perfil.apellidos, perfil.user_id, perfil.avatar, perfil.email, perfil.telefono, perfil.rol, perfil.direccion, perfil.codPostal, perfil.pais, perfil.ciudad);
   }
   // leer registro por id (método static que se puede leer desde la clase sin necesidad de crear una instancia)
   static async getByUserId(id) {
@@ -6192,7 +6196,7 @@ class Perfil {
     if (error) {
       throw new Error(error.message);
     }
-    return new Perfil(perfil.id, perfil.created_at, perfil.nombre, perfil.apellidos, perfil.user_id, perfil.avatar, perfil.email, perfil.telefono, perfil.rol);
+    return new Perfil(perfil.id, perfil.created_at, perfil.nombre, perfil.apellidos, perfil.user_id, perfil.avatar, perfil.email, perfil.telefono, perfil.rol, perfil.direccion, perfil.codPostal, perfil.pais, perfil.ciudad);
   }
   // crear registro (método static que se puede leer desde la clase sin necesidad de crear una instancia)
   static async create(perfilData) {
@@ -6368,10 +6372,9 @@ const header = {
     `,
   script: async () => {
     const phoneInputField = document.querySelector("#phone");
-    const phoneInput = window.intlTelInput(phoneInputField, {
+    window.intlTelInput(phoneInputField, {
       utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
     });
-    console.log(phoneInput);
     document.querySelector(".iti__country-list").classList += " bg-dark";
     try {
       const usuario = await User.getUser();
@@ -6393,6 +6396,7 @@ const header = {
         } else {
           document.querySelector("#navbarDropdownMenuLink").innerHTML = perfilUsuario.nombre;
           let listaPerfilLogeado = `<li><a href="/#/miPerfil" class="dropdown-item bg-dark text-white">Mi Perfil</a></li>
+                                          <li><a href="/#/verPedidos" class="dropdown-item bg-dark text-white">Mis Pedidos</a></li>
                                           <li id="logout"><a class="dropdown-item bg-dark text-white">Logout</a></li> 
                                         `;
           document.querySelector("#listaOpciones").innerHTML = listaPerfilLogeado;
@@ -6454,10 +6458,11 @@ const enrutador = {
     //Vistas de la pagina
     about: __vitePreload(() => import("./about-20861926.js"), true ? [] : void 0, import.meta.url),
     configurador: __vitePreload(() => import("./configurador-56a3ad46.js"), true ? [] : void 0, import.meta.url),
-    miPerfil: __vitePreload(() => import("./miPerfil-f9181686.js"), true ? ["./miPerfil-f9181686.js","./pedidos-b8949e0c.js"] : void 0, import.meta.url),
-    verUsuarios: __vitePreload(() => import("./usuarios-791ef8f3.js"), true ? [] : void 0, import.meta.url),
-    verPedidos: __vitePreload(() => import("./pedidos-5be9c231.js"), true ? ["./pedidos-5be9c231.js","./pedidos-b8949e0c.js"] : void 0, import.meta.url),
-    information: __vitePreload(() => import("./information-cfc126e8.js"), true ? [] : void 0, import.meta.url)
+    miPerfil: __vitePreload(() => import("./miPerfil-84b747f3.js"), true ? ["./miPerfil-84b747f3.js","./pedidos-a687a48e.js"] : void 0, import.meta.url),
+    verUsuarios: __vitePreload(() => import("./usuarios-ae837dd7.js"), true ? [] : void 0, import.meta.url),
+    verPedidos: __vitePreload(() => import("./pedidos-61e36ac3.js"), true ? ["./pedidos-61e36ac3.js","./pedidos-a687a48e.js"] : void 0, import.meta.url),
+    information: __vitePreload(() => import("./information-cfc126e8.js"), true ? [] : void 0, import.meta.url),
+    error404: __vitePreload(() => import("./error404-ddc616e7.js"), true ? [] : void 0, import.meta.url)
   },
   router: async () => {
     const pathCompleto = window.location.hash;
@@ -6493,7 +6498,7 @@ const enrutador = {
 document.querySelector("header").innerHTML = header.template;
 header.script();
 enrutador.observadorRutas();
-window.location = "/ProyectoFinal/#/home";
+window.location = "/#/home";
 const estilo = "";
 export {
   Perfil as P,

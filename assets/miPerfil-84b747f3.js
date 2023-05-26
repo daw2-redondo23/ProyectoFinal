@@ -1,5 +1,5 @@
-import { P as Pedidos } from "./pedidos-b8949e0c.js";
-import { U as User, P as Perfil } from "./main-ac8ecaa3.js";
+import { P as Pedidos } from "./pedidos-a687a48e.js";
+import { U as User, P as Perfil } from "./main-5219a3af.js";
 const miPerfil = {
   template: `<div class="container rounded mt-5 mb-5 generalProfile">
     <div class="row text-white">

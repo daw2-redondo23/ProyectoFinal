@@ -1,5 +1,5 @@
-import { P as Pedidos } from "./pedidos-b8949e0c.js";
-import { U as User, P as Perfil } from "./main-ac8ecaa3.js";
+import { P as Pedidos } from "./pedidos-a687a48e.js";
+import { U as User, P as Perfil } from "./main-5219a3af.js";
 const pedidos = {
   template: `
     <div class="mainOrders">
@@ -22,8 +22,6 @@ const pedidos = {
       </table>
     </div>
                       
-            
-      
   </div>`,
   script: async () => {
     console.log("Esta es la ventana de los pedidos");
@@ -38,16 +36,16 @@ const pedidos = {
           for (const elemento of pedidos2) {
             const perfil = await Perfil.getById(elemento.id_perfil);
             html += `<tr>
-                        <th scope="row">1</th>
-                        <td>${elemento.numeroPedido}</td>
-                        <td>${perfil.nombre}</td>
-                        <td>${perfil.email}</td>
-                        <td>Edinburgh</td>
-                        <td>${elemento.precio}$</td>
-                        <td>
-                        <button  data-id="${elemento.id}" type="button" class="btn btn-danger ms-3 btnEliminar">Delete</button>
-                        </td>
-                    </tr>`;
+                            <th scope="row">1</th>
+                            <td>${elemento.numeroPedido}</td>
+                            <td>${perfil.nombre}</td>
+                            <td>${perfil.email}</td>
+                            <td>Edinburgh</td>
+                            <td>${elemento.precio}$</td>
+                            <td>
+                            <button  data-id="${elemento.id}" type="button" class="btn btn-danger ms-3 btnEliminar">Delete</button>
+                            </td>
+                        </tr>`;
           }
           console.log(html);
           document.querySelector("tbody").innerHTML = html;
@@ -58,7 +56,7 @@ const pedidos = {
               try {
                 await Pedidos.borrar(id);
                 alert("Pedido eliminado");
-                location.reload();
+                window.location.href = "#/verPedidos";
               } catch (error) {
                 alert(error);
               }
@@ -79,7 +77,6 @@ const pedidos = {
                         <td>Bloqueado</td>
                     </tr>`;
           }
-          console.log(html);
           document.querySelector("tbody").innerHTML = html;
         }
       } catch (error) {
