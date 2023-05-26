@@ -6458,12 +6458,12 @@ const header = {
 };
 const enrutador = {
   rutas: {
-    home: __vitePreload(() => import("./home-7f1e01ff.js"), true ? [] : void 0, import.meta.url),
+    home: __vitePreload(() => import("./home-b60326da.js"), true ? [] : void 0, import.meta.url),
     about: __vitePreload(() => import("./about-20861926.js"), true ? [] : void 0, import.meta.url),
-    configurador: __vitePreload(() => import("./configurador-fd045d65.js"), true ? [] : void 0, import.meta.url),
-    miPerfil: __vitePreload(() => import("./miPerfil-ee9bd072.js"), true ? ["./miPerfil-ee9bd072.js","./pedidos-2bb02d13.js"] : void 0, import.meta.url),
-    verUsuarios: __vitePreload(() => import("./usuarios-81b7b3fa.js"), true ? [] : void 0, import.meta.url),
-    verPedidos: __vitePreload(() => import("./pedidos-1337d23d.js"), true ? ["./pedidos-1337d23d.js","./pedidos-2bb02d13.js"] : void 0, import.meta.url),
+    configurador: __vitePreload(() => import("./configurador-98901097.js"), true ? ["./configurador-98901097.js","./pedidos-090a03a4.js"] : void 0, import.meta.url),
+    miPerfil: __vitePreload(() => import("./miPerfil-8c1e478f.js"), true ? ["./miPerfil-8c1e478f.js","./pedidos-090a03a4.js"] : void 0, import.meta.url),
+    verUsuarios: __vitePreload(() => import("./usuarios-59f72ff8.js"), true ? [] : void 0, import.meta.url),
+    verPedidos: __vitePreload(() => import("./pedidos-7576012e.js"), true ? ["./pedidos-7576012e.js","./pedidos-090a03a4.js"] : void 0, import.meta.url),
     information: __vitePreload(() => import("./information-cfc126e8.js"), true ? [] : void 0, import.meta.url)
   },
   router: async () => {
