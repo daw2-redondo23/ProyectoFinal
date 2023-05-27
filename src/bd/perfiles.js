@@ -82,7 +82,12 @@ export class Perfil {
       .update({
         nombre: this.nombre,
         apellidos: this.apellidos,
-        avatar: this.avatar
+        avatar: this.avatar,
+        direccion: this.direccion,
+        codPostal: this.codPostal,
+        pais: this.pais,
+        ciudad: this.ciudad
+
       })
       .eq('id', this.id)
       .single()
