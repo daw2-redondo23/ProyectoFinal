@@ -1,4 +1,6 @@
+
 import header from "../componentes/header"
+
 
 export default  {
     template: ` <div class="container">
@@ -13,7 +15,10 @@ export default  {
     `,
     script: ()=>{
       document.querySelector('footer').innerHTML = ""
-      document.querySelector('#divGrande').classList = "container-fluid mainpage"
+      document.querySelector('#home').classList.add("active");
+      document.querySelector('#configurator').classList="nav-link mx-2";
+      document.querySelector('#about').classList="nav-link mx-2";
+      document.querySelector('#divGrande').classList = "mainpage"
       document.querySelector('main').classList = ""
       
     }

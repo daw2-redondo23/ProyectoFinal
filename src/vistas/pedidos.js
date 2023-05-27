@@ -5,6 +5,7 @@ import { User } from "../bd/user";
 export default {
     template: `
     <div class="mainOrders">
+    <h1 class="text-center text-white my-5"># Orders</h1>
     <div class="tableProfile">
       <table class="table table-dark table-bordered mt-5">
         <thead>

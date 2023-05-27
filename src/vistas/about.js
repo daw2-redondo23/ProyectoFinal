@@ -39,7 +39,7 @@ export default  {
   </section>
   <section >
     <div class="contact1">
-      <div class="container-contact1 shadow p-5 mb-5 rounded">
+      <div class="container-contact1 p-5 mb-5 rounded">
         <div class="contact1-pic js-tilt" data-tilt>
           <img src="img/img-01.png" alt="IMG">
         </div>
@@ -72,7 +72,9 @@ export default  {
   </section>
   `,
   script: ()=>{
-
+    document.querySelector('#about').classList.add("active");
+    document.querySelector('#home').classList="nav-link mx-2";
+    document.querySelector('#configurator').classList="nav-link mx-2";
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
@@ -89,6 +91,10 @@ export default  {
        
         document.querySelector('#divGrande').classList = "mainpageAbout"
         document.querySelector('footer').innerHTML = footer.template
+        
+        document.querySelector('#send').addEventListener("click",()=>{
+          document.querySelector('.swal2-html-container').classList.add("text-white");
+        })
 
   }
 }

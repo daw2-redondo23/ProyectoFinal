@@ -12,13 +12,13 @@ export default {
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link mx-2 active" aria-current="page" href="#/home">Home</a>
+              <a class="nav-link mx-2" aria-current="page" href="#/home" id="home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link mx-2" href="#/configurador">Configurator</a>
+              <a class="nav-link mx-2" href="#/configurador" id="configurator">Configurator</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link mx-2" href="#/about">About&nbspUs</a>
+              <a class="nav-link mx-2" href="#/about" id="about">About&nbspUs</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link mx-2 dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -40,7 +40,8 @@ export default {
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-body">
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close btn-close-white pe-4" data-bs-dismiss="modal" aria-label="Close"></button>
+            
             <div class="myform bg-dark">
                 <h1 class="text-center">Register</h1>
                 <form id="formRegistro" class="needs-validation" novalidate>
@@ -87,7 +88,7 @@ export default {
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-body">
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button type="button" class="btn-close btn-close-white pe-4" data-bs-dismiss="modal" aria-label="Close"></button>
             <div class="myform bg-dark">
                 <h1 class="text-center">Login</h1>
                 <form id="formLogin">

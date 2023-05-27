@@ -1,3 +1,5 @@
+
+
 export default {
     template: `<section class="hero2">
     <h1>Discover the leak</h1>
@@ -21,7 +23,9 @@ export default {
     <p>Powered by PORSCHE</p>
     <p>1 OF 1</p>
   </div>
-</section>`,
+</section>
+
+ `,
     script: ()=>{
         console.log("Esta es la vista information");
         document.querySelector('#divGrande').classList = " mainPageAbout mainPageInfo"

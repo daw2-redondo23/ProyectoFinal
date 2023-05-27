@@ -5,6 +5,8 @@ import { Pedidos } from "../bd/pedidos";
 import { Perfil } from "../bd/perfiles";
 import { Rueda } from "../bd/ruedas";
 import { User } from "../bd/user";
+import footer from "../componentes/footer";
+
 
 export default {
     template: `<section>
@@ -50,6 +52,10 @@ export default {
     </div>
   </section>`,
     script: async()=>{
+        document.querySelector('footer').innerHTML = footer.template
+        document.querySelector('#configurator').classList.add("active");
+        document.querySelector('#home').classList="nav-link mx-2";
+        document.querySelector('#about').classList="nav-link mx-2";
         console.log('Esta es la ventana del configurador');
         document.querySelector('#divGrande').classList = "bodyConfi"
         try {
@@ -77,7 +83,7 @@ export default {
             console.log(motorApintar);
             selectedImage.src = `../img/${motorApintar.img}.png`
             document.querySelector('#addCard').innerHTML=`
-                <div class="cardSetting">
+                <div class="cardSetting shadow">
                   <div class="card2">
                     <h5 class="text-white primerH1">By<p>Phoenix</p></h5>
                     <h5 class="text-white">Power<p>${motorApintar.potencia} hp</p></h5>
@@ -108,13 +114,13 @@ export default {
           console.log(neumaticoApintar);
           selectedImage.src = `../img/${neumaticoApintar.img}.png`
           document.querySelector('#addCard').innerHTML=`
-                <div class="cardSetting">
+                <div class="cardSetting shadow">
                   <div class="card2">
                     <h5 class="text-white primerH1">By<p>Phoenix</p></h5>
-                    <h5 class="text-white">Inches<p>${neumaticoApintar.pulgadas} hp</p></h5>
-                    <h5 class="text-white">Measures<p>${neumaticoApintar.medidas} Nm</p></h5>
-                    <h5 class="text-white">Noise<p>${neumaticoApintar.ruido} cc</p></h5>
-                    <h5 class="text-white">Manufacturer<p>${neumaticoApintar.fabricante} km/h</p></h5>
+                    <h5 class="text-white">Inches<p>${neumaticoApintar.pulgadas}</p></h5>
+                    <h5 class="text-white">Measures<p>${neumaticoApintar.medidas}</p></h5>
+                    <h5 class="text-white">Noise<p>${neumaticoApintar.ruido} </p></h5>
+                    <h5 class="text-white">Manufacturer<p>${neumaticoApintar.fabricante}</p></h5>
                   </div>
                 </div>`;
 
@@ -137,7 +143,7 @@ export default {
           console.log(asientoApintar);
           selectedImage.src = `../img/${asientoApintar.img}.png`
           document.querySelector('#addCard').innerHTML=`
-                <div class="cardSetting">
+                <div class="cardSetting shadow">
                   <div class="card2">
                     <h5 class="text-white primerH1">By<p>Phoenix</p></h5>
                     <h5 class="text-white">Manufacturer<p>${asientoApintar.fabricante}</p></h5>
@@ -466,8 +472,9 @@ export default {
 
                             // Iniciar el temporizador
                             actualizarContador();
+                           
         }
-
+    
         
     }
 }

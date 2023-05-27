@@ -6,7 +6,7 @@ import home from "./home";
 export default {
     template: `
                 <h1 class="text-center text-white my-5">Administration</h1>
-                <table class="table table-striped table-dark" id="TablaAdmin">
+                <table class="table table-striped table-dark mx-5" id="TablaAdmin">
                     <thead>
                     <tr>
                         <th>Name</th>
