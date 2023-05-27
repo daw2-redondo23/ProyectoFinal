@@ -14,7 +14,7 @@ const miPerfil = {
                 <div class="row mt-2 nombres">
                     <div class="col-md-6">
                         <label class="labels">Name</label>
-                        <input id="nombrePerfilInput" type="text" class="form-control" value="" disabled>
+                        <input id="nombrePerfilInput" type="text" class="form-control" value="" readonly>
                     </div>
                     <div class="col-md-6">
                         <label class="labels">Surname</label>
