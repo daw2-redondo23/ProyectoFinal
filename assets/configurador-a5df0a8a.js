@@ -1,5 +1,5 @@
-import { s as supabase, U as User, P as Perfil } from "./main-ea6ee925.js";
-import { P as Pedidos } from "./pedidos-efae8c60.js";
+import { s as supabase, U as User, P as Perfil } from "./main-34149ca4.js";
+import { P as Pedidos } from "./pedidos-3ac89b42.js";
 import { f as footer } from "./footer-6bacae86.js";
 class Asiento {
   //Mapping de las propiedades de la tabla asientos

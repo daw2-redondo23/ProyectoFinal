@@ -1,4 +1,4 @@
-import { s as supabase } from "./main-ea6ee925.js";
+import { s as supabase } from "./main-34149ca4.js";
 class Pedidos {
   //Mapping de las propiedades de la tabla pedidos
   constructor(id = null, numeroPedido = null, created_at = null, id_coche = null, id_perfil = null, precio = null) {

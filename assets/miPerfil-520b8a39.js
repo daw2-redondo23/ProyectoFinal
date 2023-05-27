@@ -1,5 +1,5 @@
-import { P as Pedidos } from "./pedidos-efae8c60.js";
-import { U as User, P as Perfil } from "./main-ea6ee925.js";
+import { P as Pedidos } from "./pedidos-3ac89b42.js";
+import { U as User, P as Perfil } from "./main-34149ca4.js";
 const miPerfil = {
   template: `<div class="container rounded mt-5 mb-5 generalProfile">
     <div class="row text-white">
@@ -14,24 +14,26 @@ const miPerfil = {
                 <div class="row mt-2 nombres">
                     <div class="col-md-6">
                         <label class="labels">Name</label>
-                        <input id="nombrePerfilInput" type="text" class="form-control" placeholder="first name" value="">
+                        <input id="nombrePerfilInput" type="text" class="form-control" value="" disabled>
                     </div>
                     <div class="col-md-6">
                         <label class="labels">Surname</label>
-                        <input id="apellidoPerfilInput" type="text" class="form-control" value="" placeholder="surname">
+                        <input id="apellidoPerfilInput" type="text" class="form-control" value="" disabled>
+                    </div>
+                    <div class="col-md-12">
+                        <label class="labels">Email</label>
+                        <input type="text" class="form-control" value="" disabled>
                     </div>
                 </div>
                 <div class="row mt-3 datosPersonales">
+                    <h4>Extra information</h4>
                     <div class="col-md-12">
                         <label class="labels">Mobile Number</label>
-                        <input id="telefonoPerfilInput" type="text" class="form-control text-white" placeholder="enter phone number" value="">
+                        <input id="telefonoPerfilInput" type="text" class="form-control" placeholder="enter phone number" value="">
                     </div>
                     <div class="col-md-12">
                         <label class="labels">Address Line 1</label>
                         <input type="text" class="form-control" placeholder="enter address line 1" value=""></div>
-                    <div class="col-md-12">
-                        <label class="labels">Address Line 2</label>
-                        <input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
                     <div class="col-md-12">
                         <label class="labels">Postcode</label>
                         <input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
@@ -41,9 +43,6 @@ const miPerfil = {
                     <div class="col-md-12">
                         <label class="labels">Area</label>
                         <input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
-                    <div class="col-md-12">
-                        <label class="labels">Email</label>
-                        <input type="text" class="form-control" placeholder="enter email id" value=""></div>
                 </div>
                 <div class="row mt-3 ciudad">
                     <div class="col-md-6"><label class="labels">Country</label><input type="text" class="form-control" placeholder="country" value=""></div>

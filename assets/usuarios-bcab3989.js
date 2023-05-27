@@ -1,4 +1,4 @@
-import { U as User, P as Perfil } from "./main-ea6ee925.js";
+import { U as User, P as Perfil } from "./main-34149ca4.js";
 const usuarios = {
   template: `
                 <h1 class="text-center text-white my-5">Administration</h1>

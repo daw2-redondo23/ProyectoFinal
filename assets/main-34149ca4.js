@@ -6459,12 +6459,12 @@ const header = {
 };
 const enrutador = {
   rutas: {
-    home: __vitePreload(() => import("./home-d5f67330.js"), true ? [] : void 0, import.meta.url),
+    home: __vitePreload(() => import("./home-c00cce6b.js"), true ? [] : void 0, import.meta.url),
     about: __vitePreload(() => import("./about-a8dc43b8.js"), true ? ["./about-a8dc43b8.js","./footer-6bacae86.js"] : void 0, import.meta.url),
-    configurador: __vitePreload(() => import("./configurador-06cef81a.js"), true ? ["./configurador-06cef81a.js","./pedidos-efae8c60.js","./footer-6bacae86.js"] : void 0, import.meta.url),
-    miPerfil: __vitePreload(() => import("./miPerfil-ad6ba556.js"), true ? ["./miPerfil-ad6ba556.js","./pedidos-efae8c60.js"] : void 0, import.meta.url),
-    verUsuarios: __vitePreload(() => import("./usuarios-dae30833.js"), true ? [] : void 0, import.meta.url),
-    verPedidos: __vitePreload(() => import("./pedidos-4c99230b.js"), true ? ["./pedidos-4c99230b.js","./pedidos-efae8c60.js"] : void 0, import.meta.url),
+    configurador: __vitePreload(() => import("./configurador-a5df0a8a.js"), true ? ["./configurador-a5df0a8a.js","./pedidos-3ac89b42.js","./footer-6bacae86.js"] : void 0, import.meta.url),
+    miPerfil: __vitePreload(() => import("./miPerfil-520b8a39.js"), true ? ["./miPerfil-520b8a39.js","./pedidos-3ac89b42.js"] : void 0, import.meta.url),
+    verUsuarios: __vitePreload(() => import("./usuarios-bcab3989.js"), true ? [] : void 0, import.meta.url),
+    verPedidos: __vitePreload(() => import("./pedidos-7c227e77.js"), true ? ["./pedidos-7c227e77.js","./pedidos-3ac89b42.js"] : void 0, import.meta.url),
     information: __vitePreload(() => import("./information-b24599cd.js"), true ? [] : void 0, import.meta.url)
   },
   router: async () => {
@@ -6517,7 +6517,7 @@ async function cargarVistaError404() {
 document.querySelector("header").innerHTML = header.template;
 header.script();
 enrutador.observadorRutas();
-window.location = "/ProyectoFinal/#/home";
+window.location = "/#/home";
 const estilo = "";
 export {
   Perfil as P,
