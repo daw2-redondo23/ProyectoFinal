@@ -1,8 +1,9 @@
-import { P as Pedidos } from "./pedidos-090a03a4.js";
-import { U as User, P as Perfil } from "./main-03a41ac2.js";
+import { P as Pedidos } from "./pedidos-efae8c60.js";
+import { U as User, P as Perfil } from "./main-ea6ee925.js";
 const pedidos = {
   template: `
     <div class="mainOrders">
+    <h1 class="text-center text-white my-5"># Orders</h1>
     <div class="tableProfile">
       <table class="table table-dark table-bordered mt-5">
         <thead>

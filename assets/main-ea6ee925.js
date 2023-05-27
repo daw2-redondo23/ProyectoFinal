@@ -6281,13 +6281,13 @@ const header = {
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link mx-2 active" aria-current="page" href="#/home">Home</a>
+              <a class="nav-link mx-2" aria-current="page" href="#/home" id="home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link mx-2" href="#/configurador">Configurator</a>
+              <a class="nav-link mx-2" href="#/configurador" id="configurator">Configurator</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link mx-2" href="#/about">About&nbspUs</a>
+              <a class="nav-link mx-2" href="#/about" id="about">About&nbspUs</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link mx-2 dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -6309,7 +6309,8 @@ const header = {
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-body">
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close btn-close-white pe-4" data-bs-dismiss="modal" aria-label="Close"></button>
+            
             <div class="myform bg-dark">
                 <h1 class="text-center">Register</h1>
                 <form id="formRegistro" class="needs-validation" novalidate>
@@ -6356,7 +6357,7 @@ const header = {
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-body">
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button type="button" class="btn-close btn-close-white pe-4" data-bs-dismiss="modal" aria-label="Close"></button>
             <div class="myform bg-dark">
                 <h1 class="text-center">Login</h1>
                 <form id="formLogin">
@@ -6458,13 +6459,13 @@ const header = {
 };
 const enrutador = {
   rutas: {
-    home: __vitePreload(() => import("./home-b60326da.js"), true ? [] : void 0, import.meta.url),
-    about: __vitePreload(() => import("./about-20861926.js"), true ? [] : void 0, import.meta.url),
-    configurador: __vitePreload(() => import("./configurador-98901097.js"), true ? ["./configurador-98901097.js","./pedidos-090a03a4.js"] : void 0, import.meta.url),
-    miPerfil: __vitePreload(() => import("./miPerfil-8c1e478f.js"), true ? ["./miPerfil-8c1e478f.js","./pedidos-090a03a4.js"] : void 0, import.meta.url),
-    verUsuarios: __vitePreload(() => import("./usuarios-59f72ff8.js"), true ? [] : void 0, import.meta.url),
-    verPedidos: __vitePreload(() => import("./pedidos-7576012e.js"), true ? ["./pedidos-7576012e.js","./pedidos-090a03a4.js"] : void 0, import.meta.url),
-    information: __vitePreload(() => import("./information-cfc126e8.js"), true ? [] : void 0, import.meta.url)
+    home: __vitePreload(() => import("./home-d5f67330.js"), true ? [] : void 0, import.meta.url),
+    about: __vitePreload(() => import("./about-a8dc43b8.js"), true ? ["./about-a8dc43b8.js","./footer-6bacae86.js"] : void 0, import.meta.url),
+    configurador: __vitePreload(() => import("./configurador-06cef81a.js"), true ? ["./configurador-06cef81a.js","./pedidos-efae8c60.js","./footer-6bacae86.js"] : void 0, import.meta.url),
+    miPerfil: __vitePreload(() => import("./miPerfil-ad6ba556.js"), true ? ["./miPerfil-ad6ba556.js","./pedidos-efae8c60.js"] : void 0, import.meta.url),
+    verUsuarios: __vitePreload(() => import("./usuarios-dae30833.js"), true ? [] : void 0, import.meta.url),
+    verPedidos: __vitePreload(() => import("./pedidos-4c99230b.js"), true ? ["./pedidos-4c99230b.js","./pedidos-efae8c60.js"] : void 0, import.meta.url),
+    information: __vitePreload(() => import("./information-b24599cd.js"), true ? [] : void 0, import.meta.url)
   },
   router: async () => {
     const pathCompleto = window.location.hash;
@@ -6516,7 +6517,7 @@ async function cargarVistaError404() {
 document.querySelector("header").innerHTML = header.template;
 header.script();
 enrutador.observadorRutas();
-window.location = "#/home";
+window.location = "/#/home";
 const estilo = "";
 export {
   Perfil as P,

@@ -1,4 +1,4 @@
-import "./main-03a41ac2.js";
+import "./main-ea6ee925.js";
 const home = {
   template: ` <div class="container">
     <div class="row justify-content-center">
@@ -12,7 +12,10 @@ const home = {
     `,
   script: () => {
     document.querySelector("footer").innerHTML = "";
-    document.querySelector("#divGrande").classList = "container-fluid mainpage";
+    document.querySelector("#home").classList.add("active");
+    document.querySelector("#configurator").classList = "nav-link mx-2";
+    document.querySelector("#about").classList = "nav-link mx-2";
+    document.querySelector("#divGrande").classList = "mainpage";
     document.querySelector("main").classList = "";
   }
 };

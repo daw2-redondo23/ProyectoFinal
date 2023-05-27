@@ -1,5 +1,6 @@
-import { s as supabase, U as User, P as Perfil } from "./main-03a41ac2.js";
-import { P as Pedidos } from "./pedidos-090a03a4.js";
+import { s as supabase, U as User, P as Perfil } from "./main-ea6ee925.js";
+import { P as Pedidos } from "./pedidos-efae8c60.js";
+import { f as footer } from "./footer-6bacae86.js";
 class Asiento {
   //Mapping de las propiedades de la tabla asientos
   constructor(id = null, created_at = null, fabricante = null, material = null, color = null, modelo = null, img = null) {
@@ -219,6 +220,10 @@ const configurador = {
     </div>
   </section>`,
   script: async () => {
+    document.querySelector("footer").innerHTML = footer.template;
+    document.querySelector("#configurator").classList.add("active");
+    document.querySelector("#home").classList = "nav-link mx-2";
+    document.querySelector("#about").classList = "nav-link mx-2";
     console.log("Esta es la ventana del configurador");
     document.querySelector("#divGrande").classList = "bodyConfi";
     try {
@@ -241,7 +246,7 @@ const configurador = {
         console.log(motorApintar);
         selectedImage.src = `../img/${motorApintar.img}.png`;
         document.querySelector("#addCard").innerHTML = `
-                <div class="cardSetting">
+                <div class="cardSetting shadow">
                   <div class="card2">
                     <h5 class="text-white primerH1">By<p>Phoenix</p></h5>
                     <h5 class="text-white">Power<p>${motorApintar.potencia} hp</p></h5>
@@ -267,13 +272,13 @@ const configurador = {
         console.log(neumaticoApintar);
         selectedImage.src = `../img/${neumaticoApintar.img}.png`;
         document.querySelector("#addCard").innerHTML = `
-                <div class="cardSetting">
+                <div class="cardSetting shadow">
                   <div class="card2">
                     <h5 class="text-white primerH1">By<p>Phoenix</p></h5>
-                    <h5 class="text-white">Inches<p>${neumaticoApintar.pulgadas} hp</p></h5>
-                    <h5 class="text-white">Measures<p>${neumaticoApintar.medidas} Nm</p></h5>
-                    <h5 class="text-white">Noise<p>${neumaticoApintar.ruido} cc</p></h5>
-                    <h5 class="text-white">Manufacturer<p>${neumaticoApintar.fabricante} km/h</p></h5>
+                    <h5 class="text-white">Inches<p>${neumaticoApintar.pulgadas}</p></h5>
+                    <h5 class="text-white">Measures<p>${neumaticoApintar.medidas}</p></h5>
+                    <h5 class="text-white">Noise<p>${neumaticoApintar.ruido} </p></h5>
+                    <h5 class="text-white">Manufacturer<p>${neumaticoApintar.fabricante}</p></h5>
                   </div>
                 </div>`;
       });
@@ -291,7 +296,7 @@ const configurador = {
         console.log(asientoApintar);
         selectedImage.src = `../img/${asientoApintar.img}.png`;
         document.querySelector("#addCard").innerHTML = `
-                <div class="cardSetting">
+                <div class="cardSetting shadow">
                   <div class="card2">
                     <h5 class="text-white primerH1">By<p>Phoenix</p></h5>
                     <h5 class="text-white">Manufacturer<p>${asientoApintar.fabricante}</p></h5>
@@ -377,7 +382,7 @@ const configurador = {
     } catch (error) {
       let actualizarContador = function() {
         if (tiempoRestante === 0) {
-          window.location.href = "ProyectoFinal/#/home";
+          window.location.href = "#/home";
         } else {
           tiempoRestante--;
           setTimeout(actualizarContador, 1e3);

@@ -1,8 +1,8 @@
-import { U as User, P as Perfil } from "./main-03a41ac2.js";
+import { U as User, P as Perfil } from "./main-ea6ee925.js";
 const usuarios = {
   template: `
                 <h1 class="text-center text-white my-5">Administration</h1>
-                <table class="table table-striped table-dark" id="TablaAdmin">
+                <table class="table table-striped table-dark mx-5" id="TablaAdmin">
                     <thead>
                     <tr>
                         <th>Name</th>
@@ -49,7 +49,7 @@ const usuarios = {
               try {
                 await Perfil.delete(id);
                 alert("Perfil Eliminado");
-                window.location.href = "ProyectoFinal/#/verUsuarios";
+                window.location.href = "#/verUsuarios";
               } catch (error) {
                 alert(error);
               }
@@ -58,7 +58,7 @@ const usuarios = {
         } else {
           let actualizarContador = function() {
             if (tiempoRestante === 0) {
-              window.location.href = "ProyectoFinal/#/home";
+              window.location.href = "#/home";
             } else {
               tiempoRestante--;
               setTimeout(actualizarContador, 1e3);
