@@ -94,7 +94,6 @@ export default {
                     <h5 class="text-white">Consumption<p>${motorApintar.consumo} L/100km</p></h5>  
                   </div>
                 </div>`;
-            
         })
 
         //neumaticos
