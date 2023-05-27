@@ -49,7 +49,7 @@ const usuarios = {
               try {
                 await Perfil.delete(id);
                 alert("Perfil Eliminado");
-                window.location.href = "#/verUsuarios";
+                window.location.href = "ProyectoFinal/#/verUsuarios";
               } catch (error) {
                 alert(error);
               }
@@ -58,7 +58,7 @@ const usuarios = {
         } else {
           let actualizarContador = function() {
             if (tiempoRestante === 0) {
-              window.location.href = "#/home";
+              window.location.href = "ProyectoFinal/#/home";
             } else {
               tiempoRestante--;
               setTimeout(actualizarContador, 1e3);

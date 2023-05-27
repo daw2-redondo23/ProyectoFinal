@@ -6516,7 +6516,7 @@ async function cargarVistaError404() {
 document.querySelector("header").innerHTML = header.template;
 header.script();
 enrutador.observadorRutas();
-window.location = "/#/home";
+window.location = "ProyectoFinal/#/home";
 const estilo = "";
 export {
   Perfil as P,
