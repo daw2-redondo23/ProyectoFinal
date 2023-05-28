@@ -2,13 +2,12 @@ import { supabase } from "./supabase";
 
 export class Pedidos {
     //Mapping de las propiedades de la tabla pedidos
-    constructor (id = null, numeroPedido = null, created_at = null, id_coche = null, id_perfil = null, precio = null){
+    constructor (id = null, numeroPedido = null, created_at = null, id_coche = null, id_perfil = null){
         this.id = id
         this.numeroPedido = numeroPedido
         this.created_at = created_at
         this.id_coche = id_coche
         this.id_perfil = id_perfil
-        this.precio = precio
     }
 
     static async getAll(){
@@ -20,8 +19,8 @@ export class Pedidos {
             throw new Error(error.message)
         }
         //devuelvo los valores de la tabla pedidos
-        return pedido.map(({id, numeroPedido, created_at, id_coche,  id_perfil, precio}) => {
-            return new Pedidos(id, numeroPedido, created_at, id_coche, id_perfil, precio)
+        return pedido.map(({id, numeroPedido, created_at, id_coche,  id_perfil}) => {
+            return new Pedidos(id, numeroPedido, created_at, id_coche, id_perfil)
         })
     }
 
@@ -36,7 +35,7 @@ export class Pedidos {
             throw new Error(error.message)
         }
         //devuelvo los valores de la tabla pedido con el id que le paso
-            return new Pedidos(pedido.id, pedido.numeroPedido, pedido.created_at, pedido.id_coche, pedido.id_perfil, pedido.precio)
+            return new Pedidos(pedido.id, pedido.numeroPedido, pedido.created_at, pedido.id_coche, pedido.id_perfil)
     }
 
     static async getAllByPerfilId(id) {
@@ -50,8 +49,8 @@ export class Pedidos {
             throw new Error(error.message)
         }
         //devuelvo los valores de la tabla pedido con el id que le paso
-        return pedido.map(({id, numeroPedido, created_at, id_coche, id_perfil, precio}) => {
-            return new Pedidos(id, numeroPedido, created_at, id_coche, id_perfil, precio)
+        return pedido.map(({id, numeroPedido, created_at, id_coche, id_perfil}) => {
+            return new Pedidos(id, numeroPedido, created_at, id_coche, id_perfil)
         })
     }
 
