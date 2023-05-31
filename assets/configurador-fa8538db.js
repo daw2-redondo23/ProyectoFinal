@@ -338,8 +338,7 @@ const configurador = {
                 const pedidoAcrear = {
                   created_at: new Date().toISOString().split("T")[0],
                   id_coche: idCoche,
-                  id_perfil: perfilUsuario.id,
-                  precio: 0
+                  id_perfil: perfilUsuario.id
                 };
                 const pedidoCreado = await Pedidos.crear(pedidoAcrear);
                 console.log(pedidoCreado);
