@@ -158,6 +158,7 @@ export default {
 
         const selectAleron = document.querySelector('#aleronSelect');
         selectAleron.addEventListener("change", (e)=>{
+          document.querySelector('#addCard').innerHTML= ``
           let id = event.target.value
           valorAleron = id
           selectedImage.src = `../img/${id}.png`

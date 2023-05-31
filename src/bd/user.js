@@ -1,5 +1,5 @@
 // Importamos la conexión a la base de datos
-import { supabase } from './supabase.js'
+import { adminAuthClient, supabase } from './supabase.js'
 
 export class User {
   // Mapping de propiedades de la tabla perfiles
@@ -52,4 +52,15 @@ export class User {
     }
     return new User(user.id, user.email)
   }
+
+
+  static async eliminarUsuario (user_id){
+    const { data, error } = await adminAuthClient.deleteUser(user_id)
+    if(error){
+      throw new Error(error.message)
+    }
+    return true
+
+  }
+  
 }

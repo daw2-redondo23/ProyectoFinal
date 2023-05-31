@@ -192,10 +192,17 @@ export default {
                 //introduzco el perfil en la base de datos
               
                 await Perfil.create(perfilNuevo)
-                alert("Tienes que confirmar el correo")
+                Swal.fire({
+                  icon: 'success',
+                  title: 'Usuario creado',
+                  html: ' <p class="text-white">Tienes que confirmar el correo para poder iniciar sesion</p>'
+                })
  
               } catch (error) {
-                  alert(error)
+                  Swal.fire({
+                    icon: 'error',
+                    text: `${error}`
+                  })
               }
             }
           

@@ -80,9 +80,7 @@ export class Perfil {
     const { error } = await supabase
       .from('perfiles')
       .update({
-        nombre: this.nombre,
-        apellidos: this.apellidos,
-        avatar: this.avatar,
+        telefono: this.telefono,
         direccion: this.direccion,
         codPostal: this.codPostal,
         pais: this.pais,

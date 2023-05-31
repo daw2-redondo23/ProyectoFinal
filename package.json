@@ -12,11 +12,13 @@
   "devDependencies": {
     "gh-pages": "^5.0.0",
     "sass": "^1.58.3",
+    "supabase": "^1.64.8",
     "vite": "^4.1.0"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.6",
     "@supabase/supabase-js": "^2.8.0",
+    "axios": "^1.4.0",
     "bootstrap": "^5.2.3"
   }
 }
