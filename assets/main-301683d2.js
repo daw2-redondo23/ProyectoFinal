@@ -6394,9 +6394,9 @@ const header = {
         if (perfilUsuario.rol == "admin") {
           document.querySelector("#navbarDropdownMenuLink").innerHTML = "Admin";
           let listaDesplegable = `
-                                        <li><a href="/#/miPerfil" class="dropdown-item bg-dark text-white">Mi Perfil</a></li>
-                                        <li><a href="/#/verUsuarios" class="dropdown-item bg-dark text-white">Ver Usuarios</a></li>
-                                        <li><a href="/#/verPedidos" class="dropdown-item bg-dark text-white">Ver Pedidos</a></li>
+                                        <li><a href="ProyectoFinal/#/miPerfil" class="dropdown-item bg-dark text-white">Mi Perfil</a></li>
+                                        <li><a href="ProyectoFinal/#/verUsuarios" class="dropdown-item bg-dark text-white">Ver Usuarios</a></li>
+                                        <li><a href="ProyectoFinal/#/verPedidos" class="dropdown-item bg-dark text-white">Ver Pedidos</a></li>
                                         <li id="logout"><a class="dropdown-item bg-dark text-white">Logout</a></li> 
                                         `;
           document.querySelector("#listaOpciones").innerHTML = listaDesplegable;
@@ -6406,8 +6406,8 @@ const header = {
           });
         } else {
           document.querySelector("#navbarDropdownMenuLink").innerHTML = perfilUsuario.nombre;
-          let listaPerfilLogeado = `<li><a href="/#/miPerfil" class="dropdown-item bg-dark text-white">Mi Perfil</a></li>
-                                          <li><a href="/#/verPedidos" class="dropdown-item bg-dark text-white">Mis Pedidos</a></li>
+          let listaPerfilLogeado = `<li><a href="ProyectoFinal/#/miPerfil" class="dropdown-item bg-dark text-white">Mi Perfil</a></li>
+                                          <li><a href="ProyectoFinal/#/verPedidos" class="dropdown-item bg-dark text-white">Mis Pedidos</a></li>
                                           <li id="logout"><a class="dropdown-item bg-dark text-white">Logout</a></li> 
                                         `;
           document.querySelector("#listaOpciones").innerHTML = listaPerfilLogeado;
@@ -6521,7 +6521,7 @@ async function cargarVistaError404() {
 document.querySelector("header").innerHTML = header.template;
 header.script();
 enrutador.observadorRutas();
-window.location = "/#/home";
+window.location = "/ProyectoFinal/#/home";
 const estilo = "";
 export {
   Perfil as P,
