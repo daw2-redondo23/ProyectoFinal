@@ -1118,7 +1118,7 @@ transform-box: fill-box;
     var tiempoRestante = 3;
     function actualizarContador() {
       if (tiempoRestante === 0) {
-        window.location.href = "/ProyectoFinal/#/home";
+        window.location.href = "#/home";
       } else {
         tiempoRestante--;
         setTimeout(actualizarContador, 1e3);
