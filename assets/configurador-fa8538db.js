@@ -212,7 +212,7 @@ const configurador = {
             </button>
             </div>
           </div>
-          <img id="selectedImage" src="/img/918.png" alt="imagenes" class="seleccionador" />
+          <img id="selectedImage" src="./assets/918.png" alt="imagenes" class="seleccionador" />
         </div>
         <div id="addCard">
         </div>
@@ -244,7 +244,7 @@ const configurador = {
         let motorApintar = await Motor.getById(id);
         valorMotor = id;
         console.log(motorApintar);
-        selectedImage.src = `../img/${motorApintar.img}.png`;
+        selectedImage.src = `./assets/${motorApintar.img}.png`;
         document.querySelector("#addCard").innerHTML = `
                 <div class="cardSetting shadow">
                   <div class="card2">
@@ -270,7 +270,7 @@ const configurador = {
         const neumaticoApintar = await Rueda.getById(id);
         valorRueda = id;
         console.log(neumaticoApintar);
-        selectedImage.src = `../img/${neumaticoApintar.img}.png`;
+        selectedImage.src = `./assets/${neumaticoApintar.img}.png`;
         document.querySelector("#addCard").innerHTML = `
                 <div class="cardSetting shadow">
                   <div class="card2">
@@ -294,7 +294,7 @@ const configurador = {
         const asientoApintar = await Asiento.getById(id);
         valorAsiento = id;
         console.log(asientoApintar);
-        selectedImage.src = `../img/${asientoApintar.img}.png`;
+        selectedImage.src = `./assets/${asientoApintar.img}.png`;
         document.querySelector("#addCard").innerHTML = `
                 <div class="cardSetting shadow">
                   <div class="card2">
@@ -311,7 +311,7 @@ const configurador = {
         document.querySelector("#addCard").innerHTML = ``;
         let id = event.target.value;
         valorAleron = id;
-        selectedImage.src = `../img/${id}.png`;
+        selectedImage.src = `./assets/${id}.png`;
       });
       document.querySelector(".mooverButton").addEventListener("click", async () => {
         Swal.fire({

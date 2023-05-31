@@ -24,13 +24,13 @@ const about = {
   <section class="team">
     <div class="d-flex personasTeam">
       <div class="member me-5 personasTeam1">
-        <img src="img/ruben.jpg" alt="Miembro del equipo" id="facePic">
+        <img src="./assets/ruben.jpg" alt="Miembro del equipo" id="facePic">
         <h3>Rubén</h3>
         <p>CEO & Functioning developer</p>
       </div>
 
       <div class="member personasTeam2">
-        <img src="img/joel.jpg" alt="Miembro del equipo" id="facePic">
+        <img src="./assets/joel.jpg" alt="Miembro del equipo" id="facePic">
         <h3>Joel</h3>
         <p>CEO & Graphic developer</p>
       </div>
@@ -40,7 +40,7 @@ const about = {
     <div class="contact1">
       <div class="container-contact1 p-5 mb-5 rounded">
         <div class="contact1-pic js-tilt" data-tilt>
-          <img src="img/img-01.png" alt="IMG">
+          <img src="./assets/img-01.png" alt="IMG">
         </div>
         <form class="contact1-form validate-form">
           <span class="contact1-form-title text-white">

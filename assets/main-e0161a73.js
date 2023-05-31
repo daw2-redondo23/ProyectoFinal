@@ -6289,7 +6289,7 @@ const header = {
   template: `<!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark p-3" id="navbarMenu">
       <div class="container-fluid">
-        <a href="#/home"><img src="/img/logo2.png" alt="logo" id="logoEncabezado" class="m-2"></a>
+        <a href="#/home"><img src="./assets/logo2.png" alt="logo" id="logoEncabezado" class="m-2"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
