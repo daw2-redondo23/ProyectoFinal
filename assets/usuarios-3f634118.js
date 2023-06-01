@@ -34,7 +34,6 @@ const usuarios = {
                                             <td>${element.email}</td>
                                             <td>${element.telefono}</td>
                                             <td>
-                                                <button class="btn btn-primary ">Edit</button>
                                                 <button data-id="${element.id}" class="btn btn-danger btnEliminar">Delete</button>
                                             </td>
                                         </tr>`;
