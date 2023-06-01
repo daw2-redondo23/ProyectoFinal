@@ -25,7 +25,8 @@ const pedidos = {
   </div>`,
   script: async () => {
     console.log("Esta es la ventana de los pedidos");
-    document.querySelector("#divGrande").classList = "";
+    document.querySelector("#divGrande").classList = "mainOrders";
+    document.querySelector("main").classList = "";
     try {
       const usuario = await User.getUser();
       const perfilUsuario = await Perfil.getByUserId(usuario.id);
