@@ -6474,7 +6474,10 @@ const header = {
         await User.login(usuarioLogin);
         location.reload();
       } catch (error) {
-        alert(error);
+        Swal.fire({
+          icon: 'error',
+          title: `${error}`
+        })
       }
     });
   }
